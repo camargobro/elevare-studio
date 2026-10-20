@@ -1,664 +1,1746 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Elevare Studio | Sites e landing pages</title>
-<meta name="description" content="A Elevare Studio cria sites institucionais e landing pages, com atendimento online para empresas de todo o Brasil e foco em conversão.">
-<link rel="icon" type="image/png" href="favicon.png">
-<link rel="apple-touch-icon" href="favicon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@800&display=swap" rel="stylesheet">
-<style>
-:root{--main:#a7e7ed;--navy:#082a44;--cyan:#16b1db;--paper:#eef9fb;--line:rgba(8,42,68,.14);--line-dark:rgba(255,255,255,.18);--t:.2s ease;--head:'Manrope',system-ui,sans-serif}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;scroll-padding-top:80px;overflow-x:hidden;-webkit-text-size-adjust:100%}
-body{font-family:'Inter',system-ui,sans-serif;font-weight:400;color:var(--navy);background:#fff;line-height:1.7;font-size:16px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-svg{display:block;max-width:100%}
-a{color:inherit;transition:color var(--t),opacity var(--t)}
-:focus-visible{outline:3px solid var(--cyan);outline-offset:3px;border-radius:4px}
-.wrap{width:min(1160px,100% - 40px);margin-inline:auto}
-h1,h2,h3{font-family:var(--head);font-weight:800;line-height:1.05;letter-spacing:-.035em}
-.logo,.nums strong,.quote cite b{font-family:var(--head)}
-h2{font-size:clamp(1.875rem,7.5vw,4rem);max-width:15ch}
-h3{letter-spacing:-.02em;line-height:1.15}
-p{max-width:56ch;font-size:.98rem;opacity:.82}
-strong{font-weight:600}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Elevare Studio | Sites e landing pages</title>
+  <meta name="description"
+    content="A Elevare Studio cria sites institucionais e landing pages, com atendimento online para empresas de todo o Brasil e foco em conversão.">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@800&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --main: #a7e7ed;
+      --navy: #082a44;
+      --cyan: #16b1db;
+      --paper: #eef9fb;
+      --line: rgba(8, 42, 68, .14);
+      --line-dark: rgba(255, 255, 255, .18);
+      --t: .2s ease;
+      --head: 'Manrope', system-ui, sans-serif
+    }
 
-.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:14px 30px;border-radius:999px;font-weight:600;font-size:1rem;text-decoration:none;border:2px solid transparent;transition:transform var(--t),background-color var(--t),color var(--t),border-color var(--t),box-shadow var(--t)}
-.btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,.18)}
-.btn:active{transform:scale(.92);box-shadow:0 3px 10px rgba(0,0,0,.18);transition-duration:.08s}
-.btn.is-clicked,.wa-float.is-clicked{animation:buttonTap .48s ease}
-@keyframes buttonTap{0%,100%{transform:scale(1)}35%{transform:scale(.9)}65%{transform:scale(1.06)}}
-.btn-main{background:var(--main);color:var(--navy)}
-.btn-main:hover{background:#fff}
-.btn-cyan{background:var(--cyan);color:var(--navy)}
-.btn-cyan:hover{background:var(--navy);color:#fff}
-.btn-ghost{border-color:var(--line-dark);color:#fff}
-.btn-ghost:hover{border-color:var(--main);color:var(--main)}
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0
+    }
 
-.nav{position:fixed;inset:0 0 auto 0;z-index:50;background:rgba(8,42,68,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line-dark)}
-.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
-.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.2rem;color:#fff;text-decoration:none;letter-spacing:-.02em}
-.logo img{height:42px;width:auto}
-.nav ul{display:flex;gap:30px;list-style:none}
-.nav ul a{color:#fff;text-decoration:none;font-weight:600;font-size:.88rem;opacity:.8}
-.nav ul a:hover{opacity:1;color:var(--main)}
-.nav .btn{min-height:44px;padding:0 20px;font-size:.88rem}
-.menu-btn,.menu-cta{display:none}
-.menu-btn{width:44px;height:44px;border:0;background:transparent;cursor:pointer;position:relative;margin-right:-10px}
-.menu-btn span{position:absolute;left:10px;right:10px;height:2px;background:#fff;border-radius:2px;transition:transform .2s,opacity .2s}
-.menu-btn span:nth-child(1){top:15px}
-.menu-btn span:nth-child(2){top:21px}
-.menu-btn span:nth-child(3){top:27px}
-.menu-btn[aria-expanded=true] span:nth-child(1){transform:translateY(6px) rotate(45deg)}
-.menu-btn[aria-expanded=true] span:nth-child(2){opacity:0}
-.menu-btn[aria-expanded=true] span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 80px;
+      overflow-x: hidden;
+      -webkit-text-size-adjust: 100%
+    }
 
-.hero{background:var(--navy);color:#fff;padding:140px 0 90px;overflow:hidden}
-.hero .wrap{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:40px;align-items:center}
-.hero-text{align-self:center}
-.hero h1{font-size:clamp(2.125rem,8.6vw,3.75rem);margin-bottom:26px}
-.hero p{font-size:1.02rem;opacity:.78;margin-bottom:38px;max-width:44ch}
-.actions{display:flex;gap:14px;flex-wrap:wrap}
-.hero .fact{margin:30px 0 0;padding-top:20px;border-top:1px solid var(--line-dark);font-size:.875rem;opacity:.72;max-width:46ch}
-.stage{position:relative;aspect-ratio:640/540;margin-right:calc((100vw - min(1160px,100vw - 40px)) / -2)}
-.stage svg{position:absolute;height:auto;filter:drop-shadow(0 24px 36px rgba(0,0,0,.35))}
-.m-desk{top:0;right:4%;width:90%;animation:rise .6s ease .05s both,floatA 8s ease-in-out .7s infinite}
-.m-phone{bottom:0;left:0;width:30%;animation:rise .6s ease .2s both,floatB 6.5s ease-in-out .8s infinite}
-@keyframes rise{from{opacity:0;transform:translateY(16px)}}
-@keyframes floatA{50%{transform:translateY(-6px)}}
-@keyframes floatB{50%{transform:translateY(-10px)}}
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-weight: 400;
+      color: var(--navy);
+      background: #fff;
+      line-height: 1.7;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden
+    }
 
-.rv{opacity:0;transform:translateY(14px);transition:opacity .4s ease,transform .4s ease}
-.rv.in,.no-js .rv{opacity:1;transform:none}
-.work-grid>.rv:nth-child(2),.bento>.rv:nth-child(2),.diff-grid>.rv:nth-child(2),.quotes>.rv:nth-child(2){transition-delay:.08s}
-.work-grid>.rv:nth-child(3),.bento>.rv:nth-child(3),.diff-grid>.rv:nth-child(3),.quotes>.rv:nth-child(3){transition-delay:.16s}
-.work-grid>.rv:nth-child(4),.diff-grid>.rv:nth-child(4){transition-delay:.24s}
-.diff-grid>.rv:nth-child(5){transition-delay:.32s}
-.diff-grid>.rv:nth-child(6){transition-delay:.4s}
-.rv.revealed{transition-delay:0s!important}
+    svg {
+      display: block;
+      max-width: 100%
+    }
 
-section{padding:120px 0}
-.head{margin-bottom:60px}
-.head p{margin-top:22px}
+    a {
+      color: inherit;
+      transition: color var(--t), opacity var(--t)
+    }
 
-.portfolio{background:var(--paper)}
-.portfolio-carousel{position:relative}
-.work-grid{display:flex;gap:24px;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scrollbar-width:none}
-.work-grid.is-animating{scroll-snap-type:none}
-.work-grid::-webkit-scrollbar{display:none}
-.work{flex:0 0 calc((100% - 24px)/2);display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden;scroll-snap-align:start;text-decoration:none;transition:opacity .4s ease,transform var(--t),box-shadow var(--t),border-color var(--t)}
-.work-thumb{overflow:hidden;background:var(--navy)}
-.work-thumb svg,.work-thumb img{width:100%;height:auto;aspect-ratio:8/5;object-fit:cover;transition:transform .4s ease}
-.work-pontoalvo .work-thumb img{object-fit:contain;background:#f3f6fa}
-.portfolio-carousel-controls{position:absolute;inset:0;display:flex;align-items:center;justify-content:space-between;pointer-events:none}
-.portfolio-carousel-controls[hidden]{display:none}
-.portfolio-carousel-controls button{display:grid;place-items:center;width:56px;height:56px;border:2px solid rgba(255,255,255,.85);border-radius:50%;background:var(--navy);color:#fff;box-shadow:0 8px 24px rgba(8,42,68,.3);cursor:pointer;pointer-events:auto;transition:background-color var(--t),color var(--t),border-color var(--t),transform var(--t),opacity var(--t),box-shadow var(--t)}
-.portfolio-carousel-controls button:first-child{margin-left:12px}
-.portfolio-carousel-controls button:last-child{margin-right:12px}
-.portfolio-carousel-controls button:hover:not(:disabled){transform:scale(1.1);background:var(--cyan);border-color:#fff;color:var(--navy);box-shadow:0 10px 28px rgba(8,42,68,.38)}
-.portfolio-carousel-controls button:active:not(:disabled){scale:.94}
-.portfolio-carousel-controls button:disabled{opacity:0;pointer-events:none}
-.portfolio-carousel-controls button svg{width:26px;height:26px}
-.portfolio-carousel-status{margin-top:20px;text-align:center;font-size:.9rem;font-weight:600;opacity:.72}
-.work-info{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:12px 16px;padding:22px 26px}
-.work h3{font-size:1.2rem;margin-bottom:2px}
-.work span{font-size:.875rem;opacity:.7}
-.work b{font-weight:600;font-size:.95rem;border-bottom:2px solid var(--cyan);transition:border-color var(--t)}
-.work:focus-visible{transform:translateY(-4px);box-shadow:0 18px 40px rgba(8,42,68,.14)}
-@media (hover:hover){
-  .work:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(8,42,68,.14);border-color:rgba(22,177,219,.55)}
-  .work:hover .work-thumb svg,.work:hover .work-thumb img{transform:scale(1.03)}
-  .work:hover b{border-color:var(--navy)}
-}
-.services{background:#fff}
-.bento{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:20px}
-.tile{border-radius:22px;padding:36px;background:var(--paper);display:flex;flex-direction:column;justify-content:space-between;gap:28px}
-.tile h3{font-size:1.5rem;margin-bottom:12px}
-.tile.big{grid-column:span 4;grid-row:span 2;background:var(--navy);color:#fff;padding:44px}
-.tile.big h3{font-size:clamp(1.75rem,5vw,3rem);letter-spacing:-.035em;line-height:1;max-width:14ch}
-.tile.big p{opacity:.78}
-.tile.big svg{width:100%;height:auto;margin-top:6px}
-.tile.sm{grid-column:span 2}
-.tile.sm:last-of-type{background:var(--main)}
-.for{margin-top:48px;display:flex;flex-wrap:wrap;gap:10px;align-items:center}
-.for span{font-weight:600;margin-right:8px}
-.for b{font-weight:600;font-size:.875rem;padding:9px 18px;border-radius:999px;border:2px solid var(--line)}
+    :focus-visible {
+      outline: 3px solid var(--cyan);
+      outline-offset: 3px;
+      border-radius: 4px
+    }
 
-.diff{background:var(--navy);color:#fff}
-.diff-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
-.dif{border:1px solid var(--line-dark);border-radius:22px;padding:30px;display:flex;flex-direction:column;justify-content:flex-end;gap:10px}
-.dif h3{font-size:1.2rem}
-.dif p{font-size:.92rem;opacity:.75}
-.dif.w2{grid-column:span 2}
-.dif.hero-d{grid-column:span 2;grid-row:span 2;background:var(--main);color:var(--navy);border:0;padding:40px}
-.dif.hero-d h3{font-size:clamp(1.75rem,5vw,3rem);letter-spacing:-.035em;line-height:1}
-.dif.hero-d p{opacity:.85;font-size:1rem}
-.dif.cy{background:var(--cyan);color:var(--navy);border:0}
-.dif.cy p{opacity:.85}
+    .wrap {
+      width: min(1160px, 100% - 40px);
+      margin-inline: auto
+    }
 
-.proof{background:var(--paper)}
-.quotes{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);gap:20px}
-.quote{background:#fff;border-radius:22px;padding:34px;display:flex;flex-direction:column;justify-content:space-between;gap:28px;border:2px solid var(--line)}
-.quote.lead{grid-row:span 2;background:var(--navy);color:#fff;border:0;padding:48px}
-.quote.lead blockquote{font-size:clamp(1.25rem,4.4vw,2.2rem);font-weight:600;line-height:1.3;letter-spacing:-.02em}
-.quote blockquote{font-size:1rem;opacity:.9}
-.quote.lead blockquote{opacity:1}
-.quote cite{font-style:normal;display:flex;align-items:center;gap:12px;font-size:.9rem;font-weight:600}
-.quote cite b{display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:var(--main);color:var(--navy);font-weight:800}
-.quote cite span{display:block;font-weight:400;opacity:.7;font-size:.875rem}
+    h1,
+    h2,
+    h3 {
+      font-family: var(--head);
+      font-weight: 800;
+      line-height: 1.05;
+      letter-spacing: -.035em
+    }
 
-.about{background:var(--main)}
-.about .wrap{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:70px;align-items:center}
-.about h2{margin-bottom:28px;max-width:13ch}
-.about p+p{margin-top:16px}
-.about p{opacity:.88}
-.nums{display:flex;gap:40px;margin-top:44px;flex-wrap:wrap}
-.nums div strong{display:block;font-weight:800;font-size:2.8rem;line-height:1;letter-spacing:-.03em}
-.nums div span{font-size:.875rem;opacity:.8;display:block;max-width:16ch;margin-top:6px;line-height:1.4}
-.about-img svg{width:100%;height:auto;max-width:400px;margin-left:auto}
+    .logo,
+    .quote cite b {
+      font-family: var(--head)
+    }
 
-.where{background:#fff}
-.where .wrap{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);gap:20px}
-.box{border-radius:22px;padding:44px;background:var(--paper)}
-.box h3{font-size:clamp(1.5rem,5vw,2.5rem);letter-spacing:-.03em;margin-bottom:20px}
-.box p{margin-bottom:14px}
-.box .btn{margin-top:10px}
-.box.dark{background:var(--navy);color:#fff}
-.hours{list-style:none}
-.hours li{display:flex;justify-content:space-between;gap:20px;padding:14px 0;border-bottom:1px solid var(--line-dark);font-size:.95rem}
-.hours li:last-child{border:0}
-.hours b{color:var(--main);font-weight:600}
+    h2 {
+      font-size: clamp(1.875rem, 7.5vw, 4rem);
+      max-width: 15ch
+    }
 
-.final{background:var(--cyan);padding:110px 0}
-.final .wrap{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:50px;align-items:end}
-.final h2{font-size:clamp(2.125rem,8.5vw,5rem);max-width:12ch}
-.final p{opacity:.9;margin-bottom:28px}
-.final .btn{background:var(--navy);color:#fff}
-.final .btn:hover{background:#fff;color:var(--navy)}
+    h3 {
+      letter-spacing: -.02em;
+      line-height: 1.15
+    }
 
-footer{background:var(--navy);color:#fff;padding:64px 0 30px}
-.foot{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;padding-bottom:36px;border-bottom:1px solid var(--line-dark)}
-.foot p{margin-top:14px;font-size:.92rem;max-width:36ch;opacity:.7}
-.foot .logo{min-height:44px}
-.foot .logo img{height:48px}
-.foot ul{list-style:none;display:grid;gap:0;font-size:.92rem}
-.foot ul a{display:inline-block;padding:12px 0;text-decoration:none;opacity:.8}
-.foot ul a:hover{opacity:1;color:var(--main)}
-.foot h4{font-weight:600;margin-bottom:4px;color:var(--main)}
-.copy{padding-top:24px;font-size:.875rem;opacity:.6}
+    p {
+      max-width: 56ch;
+      font-size: .98rem;
+      opacity: .82
+    }
 
-.wa-float{position:fixed;right:20px;bottom:20px;z-index:60;width:62px;height:62px;border-radius:50%;background:var(--main);color:var(--navy);display:grid;place-items:center;box-shadow:0 10px 28px rgba(8,42,68,.4);border:3px solid var(--navy);transition:transform .15s,opacity .2s,visibility .2s}
-.wa-float.hide{opacity:0;visibility:hidden}
-.wa-float:hover{transform:scale(1.08)}
-.wa-float svg{width:32px;height:32px;fill:currentColor}
+    strong {
+      font-weight: 600
+    }
 
-@media (max-width:900px){
-  .nav .wrap>.btn{display:none}
-  .menu-btn{display:block}
-  .nav nav{visibility:hidden;opacity:0;transform:translateY(-8px);transition:opacity .2s ease,transform .2s ease,visibility .2s;position:absolute;top:100%;left:0;right:0;background:var(--navy);padding:8px 20px 24px;border-bottom:1px solid var(--line-dark);max-height:calc(100vh - 68px);overflow-y:auto}
-  .nav nav.open{visibility:visible;opacity:1;transform:none}
-  .nav ul{flex-direction:column;gap:0}
-  .nav ul a{display:flex;align-items:center;min-height:52px;font-size:1rem;opacity:1;border-bottom:1px solid var(--line-dark)}
-  .nav .menu-cta{display:flex;width:100%;margin-top:20px;min-height:52px;padding:0 28px;font-size:1rem}
-  .hero{padding:110px 0 64px}
-  .hero .wrap,.about .wrap,.where .wrap,.final .wrap,.quotes{grid-template-columns:minmax(0,1fr)}
-  .stage{margin-right:-20px}
-  section{padding:80px 0}
-  .final{padding:80px 0}
-  .bento{grid-template-columns:minmax(0,1fr)}
-  .work{flex-basis:100%}
-  .tile.big,.tile.sm{grid-column:auto;grid-row:auto}
-  .diff-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .dif.hero-d{grid-column:span 2;grid-row:auto}
-  .dif.w2{grid-column:span 2}
-  .quote.lead{grid-row:auto}
-  .about-img svg{margin:0;max-width:300px}
-}
-@media (max-width:520px){
-  p{font-size:1rem}
-  section,.final{padding:64px 0}
-  .head{margin-bottom:36px}
-  .diff-grid{grid-template-columns:minmax(0,1fr)}
-  .dif.hero-d,.dif.w2{grid-column:auto}
-  .btn{width:100%}
-  .work-info{padding:20px}
-  .tile,.tile.big,.box,.quote,.quote.lead,.dif.hero-d{padding:26px}
-  .nums{gap:28px 32px}
-  .nums div strong{font-size:2.25rem}
-  .wa-float{width:56px;height:56px;right:16px;bottom:calc(16px + env(safe-area-inset-bottom))}
-  .wa-float svg{width:28px;height:28px}
-}
-@media (prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
-  *{transition:none!important}
-  .btn:active,.btn.is-clicked{transform:none;filter:brightness(.82);box-shadow:inset 0 2px 5px rgba(0,0,0,.22)}
-  .btn.is-clicked,.wa-float.is-clicked{animation:none}
-  .rv{opacity:1;transform:none}
-  .stage svg{animation:none}
-}
-</style>
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 14px 30px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 1rem;
+      text-decoration: none;
+      border: 2px solid transparent;
+      transition: transform var(--t), background-color var(--t), color var(--t), border-color var(--t), box-shadow var(--t)
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, .18)
+    }
+
+    .btn:active {
+      transform: scale(.92);
+      box-shadow: 0 3px 10px rgba(0, 0, 0, .18);
+      transition-duration: .08s
+    }
+
+    .btn.is-clicked,
+    .wa-float.is-clicked {
+      animation: buttonTap .48s ease
+    }
+
+    @keyframes buttonTap {
+
+      0%,
+      100% {
+        transform: scale(1)
+      }
+
+      35% {
+        transform: scale(.9)
+      }
+
+      65% {
+        transform: scale(1.06)
+      }
+    }
+
+    .btn-main {
+      background: var(--main);
+      color: var(--navy)
+    }
+
+    .btn-main:hover {
+      background: #fff
+    }
+
+    .btn-cyan {
+      background: var(--cyan);
+      color: var(--navy)
+    }
+
+    .btn-cyan:hover {
+      background: var(--navy);
+      color: #fff
+    }
+
+    .btn-ghost {
+      border-color: var(--line-dark);
+      color: #fff
+    }
+
+    .btn-ghost:hover {
+      border-color: var(--main);
+      color: var(--main)
+    }
+
+    .nav {
+      position: fixed;
+      inset: 0 0 auto 0;
+      z-index: 50;
+      background: rgba(8, 42, 68, .94);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line-dark)
+    }
+
+    .nav .wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 68px
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      font-size: 1.2rem;
+      color: #fff;
+      text-decoration: none;
+      letter-spacing: -.02em
+    }
+
+    .logo img {
+      height: 42px;
+      width: auto
+    }
+
+    .nav ul {
+      display: flex;
+      gap: 30px;
+      list-style: none
+    }
+
+    .nav ul a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: .88rem;
+      opacity: .8
+    }
+
+    .nav ul a:hover {
+      opacity: 1;
+      color: var(--main)
+    }
+
+    .nav .btn {
+      min-height: 44px;
+      padding: 0 20px;
+      font-size: .88rem
+    }
+
+    .menu-btn,
+    .menu-cta {
+      display: none
+    }
+
+    .menu-btn {
+      width: 44px;
+      height: 44px;
+      border: 0;
+      background: transparent;
+      cursor: pointer;
+      position: relative;
+      margin-right: -10px
+    }
+
+    .menu-btn span {
+      position: absolute;
+      left: 10px;
+      right: 10px;
+      height: 2px;
+      background: #fff;
+      border-radius: 2px;
+      transition: transform .2s, opacity .2s
+    }
+
+    .menu-btn span:nth-child(1) {
+      top: 15px
+    }
+
+    .menu-btn span:nth-child(2) {
+      top: 21px
+    }
+
+    .menu-btn span:nth-child(3) {
+      top: 27px
+    }
+
+    .menu-btn[aria-expanded=true] span:nth-child(1) {
+      transform: translateY(6px) rotate(45deg)
+    }
+
+    .menu-btn[aria-expanded=true] span:nth-child(2) {
+      opacity: 0
+    }
+
+    .menu-btn[aria-expanded=true] span:nth-child(3) {
+      transform: translateY(-6px) rotate(-45deg)
+    }
+
+    .hero {
+      background: var(--navy);
+      color: #fff;
+      padding: 140px 0 90px;
+      overflow: hidden
+    }
+
+    .hero .wrap {
+      display: grid;
+      grid-template-columns: minmax(0, 6fr) minmax(0, 5fr);
+      gap: 40px;
+      align-items: center
+    }
+
+    .hero-text {
+      align-self: center
+    }
+
+    .hero h1 {
+      font-size: clamp(2.125rem, 8.6vw, 3.75rem);
+      margin-bottom: 26px
+    }
+
+    .hero p {
+      font-size: 1.02rem;
+      opacity: .78;
+      margin-bottom: 38px;
+      max-width: 44ch
+    }
+
+    .actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap
+    }
+
+    .hero .fact {
+      margin: 30px 0 0;
+      padding-top: 20px;
+      border-top: 1px solid var(--line-dark);
+      font-size: .875rem;
+      opacity: .72;
+      max-width: 46ch
+    }
+
+    .stage {
+      position: relative;
+      aspect-ratio: 640/540;
+      margin-right: calc((100vw - min(1160px, 100vw - 40px)) / -2)
+    }
+
+    .stage img {
+      position: absolute;
+      height: auto;
+      filter: drop-shadow(0 24px 36px rgba(0, 0, 0, .35))
+    }
+
+    .m-desk {
+      top: 0;
+      right: 4%;
+      width: 90%;
+      border: 5px solid #fff;
+      border-radius: 18px;
+      background: #fff;
+      animation: rise .6s ease .05s both, floatA 8s ease-in-out .7s infinite
+    }
+
+    .m-phone {
+      bottom: 0;
+      left: 0;
+      width: 30%;
+      border: 5px solid #fff;
+      border-radius: 18px;
+      background: #fff;
+      animation: rise .6s ease .2s both, floatB 6.5s ease-in-out .8s infinite
+    }
+
+    @keyframes rise {
+      from {
+        opacity: 0;
+        transform: translateY(16px)
+      }
+    }
+
+    @keyframes floatA {
+      50% {
+        transform: translateY(-6px)
+      }
+    }
+
+    @keyframes floatB {
+      50% {
+        transform: translateY(-10px)
+      }
+    }
+
+    .rv {
+      opacity: 0;
+      transform: translateY(14px);
+      transition: opacity .4s ease, transform .4s ease
+    }
+
+    .rv.in,
+    .no-js .rv {
+      opacity: 1;
+      transform: none
+    }
+
+    .work-grid>.rv:nth-child(2),
+    .bento>.rv:nth-child(2),
+    .diff-grid>.rv:nth-child(2),
+    .quotes>.rv:nth-child(2) {
+      transition-delay: .08s
+    }
+
+    .work-grid>.rv:nth-child(3),
+    .bento>.rv:nth-child(3),
+    .diff-grid>.rv:nth-child(3),
+    .quotes>.rv:nth-child(3) {
+      transition-delay: .16s
+    }
+
+    .work-grid>.rv:nth-child(4),
+    .diff-grid>.rv:nth-child(4) {
+      transition-delay: .24s
+    }
+
+    .diff-grid>.rv:nth-child(5) {
+      transition-delay: .32s
+    }
+
+    .diff-grid>.rv:nth-child(6) {
+      transition-delay: .4s
+    }
+
+    .rv.revealed {
+      transition-delay: 0s !important
+    }
+
+    section {
+      padding: 120px 0
+    }
+
+    .head {
+      margin-bottom: 60px
+    }
+
+    .head p {
+      margin-top: 22px
+    }
+
+    .portfolio {
+      background: var(--paper)
+    }
+
+    .portfolio-carousel {
+      position: relative
+    }
+
+    .work-grid {
+      display: flex;
+      gap: 24px;
+      overflow-x: auto;
+      overscroll-behavior-x: contain;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: none
+    }
+
+    .work-grid.is-animating {
+      scroll-snap-type: none
+    }
+
+    .work-grid::-webkit-scrollbar {
+      display: none
+    }
+
+    .work {
+      flex: 0 0 calc((100% - 24px)/2);
+      display: flex;
+      flex-direction: column;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      overflow: hidden;
+      scroll-snap-align: start;
+      text-decoration: none;
+      transition: opacity .4s ease, transform var(--t), box-shadow var(--t), border-color var(--t)
+    }
+
+    .work-thumb {
+      overflow: hidden;
+      background: var(--navy)
+    }
+
+    .work-thumb svg,
+    .work-thumb img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 8/5;
+      object-fit: cover;
+      transition: transform .4s ease
+    }
+
+    .work-pontoalvo .work-thumb img {
+      object-fit: contain;
+      background: #f3f6fa
+    }
+
+    .portfolio-carousel-controls {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      pointer-events: none
+    }
+
+    .portfolio-carousel-controls[hidden] {
+      display: none
+    }
+
+    .portfolio-carousel-controls button {
+      display: grid;
+      place-items: center;
+      width: 56px;
+      height: 56px;
+      border: 2px solid rgba(255, 255, 255, .85);
+      border-radius: 50%;
+      background: var(--navy);
+      color: #fff;
+      box-shadow: 0 8px 24px rgba(8, 42, 68, .3);
+      cursor: pointer;
+      pointer-events: auto;
+      transition: background-color var(--t), color var(--t), border-color var(--t), transform var(--t), opacity var(--t), box-shadow var(--t)
+    }
+
+    .portfolio-carousel-controls button:first-child {
+      margin-left: 12px
+    }
+
+    .portfolio-carousel-controls button:last-child {
+      margin-right: 12px
+    }
+
+    .portfolio-carousel-controls button:hover:not(:disabled) {
+      transform: scale(1.1);
+      background: var(--cyan);
+      border-color: #fff;
+      color: var(--navy);
+      box-shadow: 0 10px 28px rgba(8, 42, 68, .38)
+    }
+
+    .portfolio-carousel-controls button:active:not(:disabled) {
+      scale: .94
+    }
+
+    .portfolio-carousel-controls button:disabled {
+      opacity: 0;
+      pointer-events: none
+    }
+
+    .portfolio-carousel-controls button svg {
+      width: 26px;
+      height: 26px
+    }
+
+    .portfolio-carousel-status {
+      margin-top: 20px;
+      text-align: center;
+      font-size: .9rem;
+      font-weight: 600;
+      opacity: .72
+    }
+
+    .work-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      gap: 12px 16px;
+      padding: 22px 26px
+    }
+
+    .work h3 {
+      font-size: 1.2rem;
+      margin-bottom: 2px
+    }
+
+    .work span {
+      font-size: .875rem;
+      opacity: .7
+    }
+
+    .work b {
+      font-weight: 600;
+      font-size: .95rem;
+      border-bottom: 2px solid var(--cyan);
+      transition: border-color var(--t)
+    }
+
+    .work:focus-visible {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 40px rgba(8, 42, 68, .14)
+    }
+
+    @media (hover:hover) {
+      .work:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 18px 40px rgba(8, 42, 68, .14);
+        border-color: rgba(22, 177, 219, .55)
+      }
+
+      .work:hover .work-thumb svg,
+      .work:hover .work-thumb img {
+        transform: scale(1.03)
+      }
+
+      .work:hover b {
+        border-color: var(--navy)
+      }
+    }
+
+    .services {
+      background: #fff
+    }
+
+    .bento {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 20px
+    }
+
+    .tile {
+      border-radius: 22px;
+      padding: 36px;
+      background: var(--paper);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 28px
+    }
+
+    .tile h3 {
+      font-size: 1.5rem;
+      margin-bottom: 12px
+    }
+
+    .tile.big {
+      grid-column: span 4;
+      grid-row: span 2;
+      background: var(--navy);
+      color: #fff;
+      padding: 44px
+    }
+
+    .tile.big h3 {
+      font-size: clamp(1.75rem, 5vw, 3rem);
+      letter-spacing: -.035em;
+      line-height: 1;
+      max-width: 14ch
+    }
+
+    .tile.big p {
+      opacity: .78
+    }
+
+    .tile.big .tile-preview {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 1054 / 546;
+      margin-top: 6px;
+      border-radius: 14px;
+      object-fit: cover;
+      object-position: center
+    }
+
+    .tile.sm {
+      grid-column: span 2
+    }
+
+    .tile.sm:last-of-type {
+      background: var(--main)
+    }
+
+    .for {
+      margin-top: 48px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center
+    }
+
+    .for span {
+      font-weight: 600;
+      margin-right: 8px
+    }
+
+    .for b {
+      font-weight: 600;
+      font-size: .875rem;
+      padding: 9px 18px;
+      border-radius: 999px;
+      border: 2px solid var(--line)
+    }
+
+    .diff {
+      background: var(--navy);
+      color: #fff
+    }
+
+    .diff-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px
+    }
+
+    .dif {
+      border: 1px solid var(--line-dark);
+      border-radius: 22px;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      gap: 10px
+    }
+
+    .dif h3 {
+      font-size: 1.2rem
+    }
+
+    .dif p {
+      font-size: .92rem;
+      opacity: .75
+    }
+
+    .dif.w2 {
+      grid-column: span 2
+    }
+
+    .dif.hero-d {
+      grid-column: span 2;
+      grid-row: span 2;
+      background: var(--main);
+      color: var(--navy);
+      border: 0;
+      padding: 40px
+    }
+
+    .dif.hero-d h3 {
+      font-size: clamp(1.75rem, 5vw, 3rem);
+      letter-spacing: -.035em;
+      line-height: 1
+    }
+
+    .dif.hero-d p {
+      opacity: .85;
+      font-size: 1rem
+    }
+
+    .dif.cy {
+      background: var(--cyan);
+      color: var(--navy);
+      border: 0
+    }
+
+    .dif.cy p {
+      opacity: .85
+    }
+
+    .proof {
+      background: var(--paper)
+    }
+
+    .quotes {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+      gap: 20px
+    }
+
+    .quote {
+      background: #fff;
+      border-radius: 22px;
+      padding: 34px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 28px;
+      border: 2px solid var(--line)
+    }
+
+    .quote.lead {
+      grid-row: span 2;
+      background: var(--navy);
+      color: #fff;
+      border: 0;
+      padding: 48px
+    }
+
+    .quote.lead blockquote {
+      font-size: clamp(1.25rem, 4.4vw, 2.2rem);
+      font-weight: 600;
+      line-height: 1.3;
+      letter-spacing: -.02em
+    }
+
+    .quote blockquote {
+      font-size: 1rem;
+      opacity: .9
+    }
+
+    .quote.lead blockquote {
+      opacity: 1
+    }
+
+    .quote cite {
+      font-style: normal;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: .9rem;
+      font-weight: 600
+    }
+
+    .quote cite b {
+      display: grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: var(--main);
+      color: var(--navy);
+      font-weight: 800
+    }
+
+    .quote cite span {
+      display: block;
+      font-weight: 400;
+      opacity: .7;
+      font-size: .875rem
+    }
+
+    .price {
+      background: var(--main);
+      text-align: center
+    }
+
+    .price .wrap {
+      display: grid;
+      justify-items: center;
+      gap: 20px
+    }
+
+    .price h2 {
+      max-width: none
+    }
+
+    .price p {
+      max-width: 56ch
+    }
+
+    .price-label {
+      font-weight: 600;
+      font-size: 1.05rem
+    }
+
+    .price-value {
+      font-family: var(--head);
+      font-size: clamp(2.5rem, 10vw, 5rem);
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: -.04em
+    }
+
+    .where {
+      background: #fff
+    }
+
+    .where .wrap {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+      gap: 20px
+    }
+
+    .box {
+      border-radius: 22px;
+      padding: 44px;
+      background: var(--paper)
+    }
+
+    .box h3 {
+      font-size: clamp(1.5rem, 5vw, 2.5rem);
+      letter-spacing: -.03em;
+      margin-bottom: 20px
+    }
+
+    .box p {
+      margin-bottom: 14px
+    }
+
+    .box .btn {
+      margin-top: 10px
+    }
+
+    .box.dark {
+      background: var(--navy);
+      color: #fff
+    }
+
+    .hours {
+      list-style: none
+    }
+
+    .hours li {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--line-dark);
+      font-size: .95rem
+    }
+
+    .hours li:last-child {
+      border: 0
+    }
+
+    .hours b {
+      color: var(--main);
+      font-weight: 600
+    }
+
+    .final {
+      background: var(--cyan);
+      padding: 110px 0
+    }
+
+    .final .wrap {
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+      gap: 50px;
+      align-items: end
+    }
+
+    .final h2 {
+      font-size: clamp(2.125rem, 8.5vw, 5rem);
+      max-width: 12ch
+    }
+
+    .final p {
+      opacity: .9;
+      margin-bottom: 28px
+    }
+
+    .final .btn {
+      background: var(--navy);
+      color: #fff
+    }
+
+    .final .btn:hover {
+      background: #fff;
+      color: var(--navy)
+    }
+
+    footer {
+      background: var(--navy);
+      color: #fff;
+      padding: 64px 0 30px
+    }
+
+    .foot {
+      display: flex;
+      justify-content: space-between;
+      gap: 40px;
+      flex-wrap: wrap;
+      padding-bottom: 36px;
+      border-bottom: 1px solid var(--line-dark)
+    }
+
+    .foot p {
+      margin-top: 14px;
+      font-size: .92rem;
+      max-width: 36ch;
+      opacity: .7
+    }
+
+    .foot .logo {
+      min-height: 44px
+    }
+
+    .foot .logo img {
+      height: 48px
+    }
+
+    .foot ul {
+      list-style: none;
+      display: grid;
+      gap: 0;
+      font-size: .92rem
+    }
+
+    .foot ul a {
+      display: inline-block;
+      padding: 12px 0;
+      text-decoration: none;
+      opacity: .8
+    }
+
+    .foot ul a:hover {
+      opacity: 1;
+      color: var(--main)
+    }
+
+    .foot h4 {
+      font-weight: 600;
+      margin-bottom: 4px;
+      color: var(--main)
+    }
+
+    .foot ul a.insta-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      width: fit-content;
+      min-height: 40px;
+      margin: 4px 0;
+      padding: 8px 12px;
+      border: 1px solid var(--line-dark);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, .05);
+      opacity: 1;
+      line-height: 1.3
+    }
+
+    .foot ul a.insta-link:hover {
+      border-color: var(--main);
+      color: var(--main);
+      background: rgba(255, 255, 255, .1)
+    }
+
+    .insta-link svg {
+      width: 18px;
+      height: 18px;
+      fill: currentColor
+    }
+
+    .copy {
+      padding-top: 24px;
+      font-size: .875rem;
+      opacity: .6
+    }
+
+    .wa-float {
+      position: fixed;
+      left: 20px;
+      bottom: 20px;
+      z-index: 60;
+      width: 62px;
+      height: 62px;
+      border-radius: 50%;
+      background: var(--main);
+      color: var(--navy);
+      display: grid;
+      place-items: center;
+      box-shadow: 0 10px 28px rgba(8, 42, 68, .4);
+      border: 3px solid var(--navy);
+      transition: transform .15s, opacity .2s, visibility .2s
+    }
+
+    .wa-float.hide {
+      opacity: 0;
+      visibility: hidden
+    }
+
+    .wa-float:hover {
+      transform: scale(1.08)
+    }
+
+    .wa-float svg {
+      width: 32px;
+      height: 32px;
+      fill: currentColor
+    }
+
+    @media (max-width:900px) {
+      .nav .wrap>.btn {
+        display: none
+      }
+
+      .menu-btn {
+        display: block
+      }
+
+      .nav nav {
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(-8px);
+        transition: opacity .2s ease, transform .2s ease, visibility .2s;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--navy);
+        padding: 8px 20px 24px;
+        border-bottom: 1px solid var(--line-dark);
+        max-height: calc(100vh - 68px);
+        overflow-y: auto
+      }
+
+      .nav nav.open {
+        visibility: visible;
+        opacity: 1;
+        transform: none
+      }
+
+      .nav ul {
+        flex-direction: column;
+        gap: 0
+      }
+
+      .nav ul a {
+        display: flex;
+        align-items: center;
+        min-height: 52px;
+        font-size: 1rem;
+        opacity: 1;
+        border-bottom: 1px solid var(--line-dark)
+      }
+
+      .nav .menu-cta {
+        display: flex;
+        width: 100%;
+        margin-top: 20px;
+        min-height: 52px;
+        padding: 0 28px;
+        font-size: 1rem
+      }
+
+      .hero {
+        padding: 110px 0 64px
+      }
+
+      .hero .wrap,
+      .where .wrap,
+      .final .wrap,
+      .quotes {
+        grid-template-columns: minmax(0, 1fr)
+      }
+
+      .stage {
+        margin-right: -20px
+      }
+
+      section {
+        padding: 80px 0
+      }
+
+      .final {
+        padding: 80px 0
+      }
+
+      .bento {
+        grid-template-columns: minmax(0, 1fr)
+      }
+
+      .work {
+        flex-basis: 100%
+      }
+
+      .tile.big,
+      .tile.sm {
+        grid-column: auto;
+        grid-row: auto
+      }
+
+      .diff-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr))
+      }
+
+      .dif.hero-d {
+        grid-column: span 2;
+        grid-row: auto
+      }
+
+      .dif.w2 {
+        grid-column: span 2
+      }
+
+      .quote.lead {
+        grid-row: auto
+      }
+    }
+
+    @media (max-width:520px) {
+      p {
+        font-size: 1rem
+      }
+
+      section,
+      .final {
+        padding: 64px 0
+      }
+
+      .head {
+        margin-bottom: 36px
+      }
+
+      .diff-grid {
+        grid-template-columns: minmax(0, 1fr)
+      }
+
+      .dif.hero-d,
+      .dif.w2 {
+        grid-column: auto
+      }
+
+      .btn {
+        width: 100%
+      }
+
+      .work-info {
+        padding: 20px
+      }
+
+      .tile,
+      .tile.big,
+      .box,
+      .quote,
+      .quote.lead,
+      .dif.hero-d {
+        padding: 26px
+      }
+
+      .wa-float {
+        width: 56px;
+        height: 56px;
+        left: 16px;
+        bottom: calc(16px + env(safe-area-inset-bottom))
+      }
+
+      .wa-float svg {
+        width: 28px;
+        height: 28px
+      }
+    }
+
+    @media (prefers-reduced-motion:reduce) {
+      html {
+        scroll-behavior: auto
+      }
+
+      * {
+        transition: none !important
+      }
+
+      .btn:active,
+      .btn.is-clicked {
+        transform: none;
+        filter: brightness(.82);
+        box-shadow: inset 0 2px 5px rgba(0, 0, 0, .22)
+      }
+
+      .btn.is-clicked,
+      .wa-float.is-clicked {
+        animation: none
+      }
+
+      .rv {
+        opacity: 1;
+        transform: none
+      }
+
+      .stage img {
+        animation: none
+      }
+    }
+  </style>
 </head>
+
 <body class="no-js">
 
-<header class="nav">
-  <div class="wrap">
-    <a href="#inicio" class="logo" aria-label="Elevare Studio, página inicial"><img src="logo.png" alt="Elevare Studio" width="170" height="42"></a>
-    <nav id="menu" aria-label="Principal">
-      <ul>
-        <li><a href="#portfolio">Portfólio</a></li>
-        <li><a href="#servicos">Serviços</a></li>
-        <li><a href="#diferenciais">Diferenciais</a></li>
-        <li><a href="#depoimentos">Depoimentos</a></li>
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
-      <a class="btn btn-main menu-cta" href="https://wa.me/5551995424238?text=Ol%C3%A1!%20Gostaria%20de%20conhecer%20um%20pouco%20melhor%20os%20servi%C3%A7os%20da%20Elevare%20Studio." target="_blank" rel="noopener">Pedir orçamento</a>
-    </nav>
-    <a class="btn btn-main" href="https://wa.me/5551995424238?text=Ol%C3%A1!%20Gostaria%20de%20conhecer%20um%20pouco%20melhor%20os%20servi%C3%A7os%20da%20Elevare%20Studio." target="_blank" rel="noopener">Pedir orçamento</a>
-    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu"><span></span><span></span><span></span></button>
-  </div>
-</header>
-
-<main>
-<section class="hero" id="inicio">
-  <div class="wrap">
-    <div class="hero-text">
-      <h1>Sites e landing pages que transformam visitantes em clientes.</h1>
-      <p>Estrutura clara, design profissional e um caminho direto até o seu WhatsApp. Para negócios que ainda não têm site ou querem refazer o que já têm.</p>
-      <div class="actions">
-        <a class="btn btn-main" href="https://wa.me/5551995424238?text=Ol%C3%A1!%20Gostaria%20de%20conhecer%20um%20pouco%20melhor%20os%20servi%C3%A7os%20da%20Elevare%20Studio." target="_blank" rel="noopener">Solicitar orçamento</a>
-        <a class="btn btn-ghost" href="#portfolio">Ver portfólio</a>
-      </div>
-      <p class="fact">Especialidades: landing pages de alta conversão, sites institucionais e redesign de sites. Atendimento direto pelo WhatsApp.</p>
-    </div>
-    <div class="stage" aria-hidden="true">
-      <svg class="m-desk" viewBox="0 0 640 480" xmlns="http://www.w3.org/2000/svg">
-        <rect width="640" height="480" rx="20" fill="#fff"/>
-        <path d="M0 20A20 20 0 0 1 20 0h600a20 20 0 0 1 20 20v22H0z" fill="#dbe8ee"/>
-        <circle cx="26" cy="21" r="6" fill="#a9bcc8"/><circle cx="46" cy="21" r="6" fill="#a9bcc8"/><circle cx="66" cy="21" r="6" fill="#a9bcc8"/>
-        <rect x="140" y="11" width="360" height="20" rx="10" fill="#f6fbfc"/>
-        <rect x="28" y="64" width="26" height="26" rx="7" fill="#082a44"/>
-        <rect x="420" y="72" width="50" height="10" rx="5" fill="#bcd0da"/><rect x="486" y="72" width="50" height="10" rx="5" fill="#bcd0da"/><rect x="552" y="72" width="50" height="10" rx="5" fill="#bcd0da"/>
-        <rect x="28" y="116" width="584" height="200" rx="14" fill="#082a44"/>
-        <rect x="56" y="150" width="270" height="22" rx="11" fill="#a7e7ed"/>
-        <rect x="56" y="184" width="200" height="22" rx="11" fill="#a7e7ed" opacity=".5"/>
-        <rect x="56" y="240" width="130" height="38" rx="19" fill="#16b1db"/>
-        <rect x="380" y="140" width="200" height="150" rx="12" fill="#16b1db"/>
-        <rect x="28" y="340" width="184" height="110" rx="12" fill="#eef9fb"/>
-        <rect x="228" y="340" width="184" height="110" rx="12" fill="#eef9fb"/>
-        <rect x="428" y="340" width="184" height="110" rx="12" fill="#a7e7ed"/>
-      </svg>
-      <svg class="m-phone" viewBox="0 0 200 400" xmlns="http://www.w3.org/2000/svg">
-        <rect x="4" y="4" width="192" height="392" rx="34" fill="#0d3a5c" stroke="#16b1db" stroke-width="4"/>
-        <rect x="20" y="40" width="160" height="320" rx="18" fill="#fff"/>
-        <rect x="32" y="56" width="136" height="100" rx="12" fill="#a7e7ed"/>
-        <rect x="44" y="72" width="84" height="12" rx="6" fill="#082a44"/>
-        <rect x="44" y="94" width="58" height="12" rx="6" fill="#082a44" opacity=".5"/>
-        <rect x="44" y="122" width="60" height="22" rx="11" fill="#16b1db"/>
-        <rect x="32" y="170" width="136" height="50" rx="10" fill="#eef9fb"/>
-        <rect x="32" y="232" width="136" height="50" rx="10" fill="#eef9fb"/>
-        <rect x="32" y="304" width="136" height="38" rx="19" fill="#16b1db"/>
-        <rect x="64" y="318" width="72" height="10" rx="5" fill="#fff"/>
-      </svg>
-    </div>
-  </div>
-</section>
-
-<section class="portfolio" id="portfolio">
-  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
-    <symbol id="s1" viewBox="0 0 640 400"><rect width="640" height="400" fill="#082a44"/><rect x="48" y="72" width="300" height="26" rx="13" fill="#a7e7ed"/><rect x="48" y="112" width="220" height="26" rx="13" fill="#a7e7ed" opacity=".5"/><rect x="48" y="176" width="150" height="46" rx="23" fill="#16b1db"/><rect x="392" y="56" width="200" height="288" rx="18" fill="#16b1db"/><rect x="412" y="84" width="120" height="14" rx="7" fill="#082a44"/><rect x="412" y="110" width="84" height="14" rx="7" fill="#082a44" opacity=".5"/></symbol>
-    <symbol id="s2" viewBox="0 0 640 400"><rect width="640" height="400" fill="#eef9fb"/><rect x="32" y="28" width="32" height="32" rx="8" fill="#082a44"/><rect x="400" y="38" width="60" height="12" rx="6" fill="#bcd0da"/><rect x="480" y="38" width="60" height="12" rx="6" fill="#bcd0da"/><rect x="32" y="90" width="576" height="130" rx="16" fill="#16b1db"/><rect x="60" y="122" width="240" height="20" rx="10" fill="#082a44"/><rect x="60" y="154" width="170" height="20" rx="10" fill="#082a44" opacity=".5"/><rect x="32" y="244" width="180" height="120" rx="14" fill="#fff"/><rect x="230" y="244" width="180" height="120" rx="14" fill="#fff"/><rect x="428" y="244" width="180" height="120" rx="14" fill="#a7e7ed"/></symbol>
-    <symbol id="s3" viewBox="0 0 640 400"><rect width="320" height="400" fill="#d6dde2"/><rect x="24" y="30" width="200" height="14" fill="#aab6bf"/><rect x="24" y="64" width="150" height="60" fill="#b9c4cc"/><rect x="190" y="90" width="110" height="90" fill="#c4ced5"/><rect x="24" y="190" width="270" height="10" fill="#aab6bf"/><rect x="24" y="214" width="240" height="10" fill="#aab6bf"/><rect x="320" width="320" height="400" fill="#082a44"/><rect x="352" y="56" width="200" height="22" rx="11" fill="#a7e7ed"/><rect x="352" y="92" width="150" height="22" rx="11" fill="#a7e7ed" opacity=".5"/><rect x="352" y="150" width="110" height="38" rx="19" fill="#16b1db"/><rect x="352" y="230" width="116" height="110" rx="12" fill="#0d3a5c"/><rect x="484" y="230" width="116" height="110" rx="12" fill="#16b1db"/></symbol>
-  </svg>
-  <div class="wrap">
-    <div class="head rv">
-      <h2>Projetos feitos pela Elevare Studio</h2>
-      <p>Conheça o PontoAlvo e veja formatos de sites e landing pages que podemos criar para o seu negócio.</p>
-    </div>
-    <div class="portfolio-carousel">
-      <div class="work-grid" role="region" aria-label="Carrossel de projetos" tabindex="0">
-        <article class="work">
-          <div class="work-thumb"><svg viewBox="0 0 640 400" aria-hidden="true"><use href="#s1" width="640" height="400"/></svg></div>
-          <div class="work-info"><div><h3>Landing page</h3><span>Estrutura de página focada em conversão</span></div><b>Exemplo de layout</b></div>
-        </article>
-        <a class="work work-pontoalvo" href="https://dashboardvendaexterna-1.onrender.com/#/" target="_blank" rel="noopener">
-          <div class="work-thumb"><img src="pontoalvo.PNG" alt="Prévia do site PontoAlvo"></div>
-          <div class="work-info"><div><h3>PontoAlvo</h3><span>Aplicativo para empresas</span></div><b>Ver demonstração</b></div>
-        </a>
-        <article class="work">
-          <div class="work-thumb"><svg viewBox="0 0 640 400" aria-hidden="true"><use href="#s3" width="640" height="400"/></svg></div>
-          <div class="work-info"><div><h3>Redesign de site</h3><span>Exemplo de renovação visual</span></div><b>Exemplo de layout</b></div>
-        </article>
-        <article class="work">
-          <div class="work-thumb"><svg viewBox="0 0 640 400" aria-hidden="true"><use href="#s2" width="640" height="400"/></svg></div>
-          <div class="work-info"><div><h3>Site institucional</h3><span>Exemplo de apresentação para empresas</span></div><b>Exemplo de layout</b></div>
-        </article>
-      </div>
-      <div class="portfolio-carousel-controls" hidden>
-        <button type="button" class="portfolio-carousel-prev" aria-label="Ver projetos anteriores" disabled>
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
-        </button>
-        <button type="button" class="portfolio-carousel-next" aria-label="Ver próximos projetos">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
-        </button>
-      </div>
-    </div>
-    <p class="portfolio-carousel-status" aria-live="polite"></p>
-  </div>
-</section>
-
-<section class="services" id="servicos">
-  <div class="wrap">
-    <div class="head rv">
-      <h2>O que a Elevare Studio faz pelo seu negócio</h2>
-      <p>Do primeiro rascunho ao site no ar, cuidamos de tudo para você focar em atender.</p>
-    </div>
-    <div class="bento">
-      <article class="tile big">
-        <div>
-          <h3>Landing pages de alta conversão</h3>
-          <p>Uma página única, direta e focada em um objetivo: levar o visitante a chamar no WhatsApp ou agendar.</p>
-        </div>
-        <svg aria-hidden="true" viewBox="0 0 520 170" xmlns="http://www.w3.org/2000/svg">
-          <rect width="520" height="170" rx="14" fill="#0d3a5c"/>
-          <rect x="24" y="24" width="250" height="20" rx="10" fill="#a7e7ed"/>
-          <rect x="24" y="58" width="180" height="20" rx="10" fill="#a7e7ed" opacity=".45"/>
-          <rect x="24" y="104" width="120" height="36" rx="18" fill="#16b1db"/>
-          <rect x="310" y="24" width="186" height="122" rx="12" fill="#16b1db"/>
-          <rect x="326" y="44" width="110" height="12" rx="6" fill="#082a44"/>
-          <rect x="326" y="68" width="80" height="12" rx="6" fill="#082a44" opacity=".5"/>
-        </svg>
-      </article>
-      <article class="tile sm">
-        <h3>Sites institucionais</h3>
-        <p>Seu negócio com endereço próprio, serviços, horários, localização e tudo o que o cliente procura.</p>
-      </article>
-      <article class="tile sm">
-        <h3>Redesign de sites</h3>
-        <p>Seu site é antigo, lento ou confuso? Reorganizamos a estrutura e renovamos o visual para converter mais.</p>
-      </article>
-    </div>
-    <div class="for">
-      <span>Atendemos:</span>
-      <b>Barbearias</b><b>Dentistas</b><b>Mercados</b><b>Lancherias</b><b>Clínicas</b><b>Lojas</b><b>Prestadores de serviço</b>
-    </div>
-  </div>
-</section>
-
-<section class="diff" id="diferenciais">
-  <div class="wrap">
-    <div class="head rv">
-      <h2>Bonito é o mínimo. O site tem que vender.</h2>
-      <p>A maioria dos sites perde clientes por estrutura confusa e design sem direção. Resolvemos isso desde o começo.</p>
-    </div>
-    <div class="diff-grid">
-      <div class="dif hero-d"><h3>Estrutura pensada para converter</h3><p>Cada bloco da página tem uma função: mostrar valor, gerar confiança e levar ao contato.</p></div>
-      <div class="dif w2"><h3>Feito para o celular</h3><p>Seu cliente chega pelo celular. O site abre rápido, lê fácil e o botão de contato está sempre à mão.</p></div>
-      <div class="dif cy"><h3>Carregamento rápido</h3><p>Páginas leves, sem enfeites que travam.</p></div>
-      <div class="dif"><h3>Presença no Google</h3><p>Estrutura pronta para as buscas da sua região.</p></div>
-      <div class="dif w2"><h3>Atendimento direto</h3><p>Você fala com quem faz o seu site, sem intermediários, e acompanha cada etapa.</p></div>
-      <div class="dif w2"><h3>Preço claro, sem surpresas</h3><p>Você recebe o orçamento fechado antes de começar. O que combinamos é o que você paga.</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="proof" id="depoimentos">
-  <div class="wrap">
-    <div class="head rv">
-      <h2>Quem já elevou a presença online</h2>
-    </div>
-    <div class="quotes">
-      <figure class="quote lead">
-        <blockquote>Antes eu só tinha Instagram. Com a página nova, os clientes passaram a encontrar a barbearia no Google e agendar direto pelo WhatsApp.</blockquote>
-        <cite><b>R</b><div>Rafael M.<span>Dono de barbearia</span></div></cite>
-      </figure>
-      <figure class="quote">
-        <blockquote>Meu site antigo era confuso e ninguém ligava. O redesign deixou tudo claro: serviços, horários e um botão para marcar consulta. O movimento aumentou.</blockquote>
-        <cite><b>D</b><div>Dra. Camila S.<span>Dentista</span></div></cite>
-      </figure>
-      <figure class="quote">
-        <blockquote>Rápido, bonito e sem enrolação. Mostramos o cardápio e as promoções, e os pedidos pelo WhatsApp cresceram desde a primeira semana.</blockquote>
-        <cite><b>L</b><div>Luciano P.<span>Dono de lancheria</span></div></cite>
-      </figure>
-    </div>
-  </div>
-</section>
-
-<section class="about" id="sobre">
-  <div class="wrap">
-    <div class="rv">
-      <h2>Um estúdio pequeno, com atenção total ao seu projeto</h2>
-      <p>A Elevare Studio nasceu para ajudar negócios de todos os tamanhos a ter um site que trabalha por eles. Acreditamos que uma boa página não precisa ser complicada: precisa ser clara, rápida e pensada para quem vai usar.</p>
-      <p>Por isso começamos entendendo o seu negócio e o seu cliente. Só depois desenhamos a estrutura e o visual.</p>
-      <div class="nums">
-        <div><strong>100%</strong><span>focado em sites e landing pages que geram contato</span></div>
-        <div><strong>Todos</strong><span>os tipos de negócio, de barbearias a mercados</span></div>
-        <div><strong>1 a 1</strong><span>atendimento direto, do orçamento à entrega</span></div>
-      </div>
-    </div>
-    <div class="about-img rv" aria-hidden="true">
-      <svg viewBox="0 0 400 480" xmlns="http://www.w3.org/2000/svg">
-        <rect x="40" y="10" width="320" height="460" rx="44" fill="#082a44"/>
-        <rect x="62" y="50" width="276" height="150" rx="20" fill="#16b1db"/>
-        <rect x="86" y="84" width="170" height="18" rx="9" fill="#082a44"/>
-        <rect x="86" y="114" width="120" height="18" rx="9" fill="#082a44" opacity=".5"/>
-        <rect x="86" y="154" width="100" height="30" rx="15" fill="#a7e7ed"/>
-        <rect x="62" y="218" width="276" height="62" rx="16" fill="#a7e7ed" opacity=".25"/>
-        <rect x="62" y="294" width="276" height="62" rx="16" fill="#a7e7ed" opacity=".25"/>
-        <rect x="62" y="390" width="276" height="54" rx="27" fill="#a7e7ed"/>
-        <rect x="126" y="412" width="148" height="10" rx="5" fill="#082a44"/>
-      </svg>
-    </div>
-  </div>
-</section>
-
-<section class="where" id="contato">
-  <div class="wrap">
-    <div class="box rv">
-      <h3>Onde estamos</h3>
-      <p>Atendemos 100% online, para negócios de todo o Brasil.</p>
-      <p>Conversa direta no WhatsApp, no horário que for melhor para você.</p>
-      <p><strong>WhatsApp:</strong> (51) 99542-4238</p>
-      <a class="btn btn-cyan" href="https://wa.me/5551995424238?text=Ol%C3%A1!%20Gostaria%20de%20conhecer%20um%20pouco%20melhor%20os%20servi%C3%A7os%20da%20Elevare%20Studio." target="_blank" rel="noopener">Chamar agora</a>
-    </div>
-    <div class="box dark rv">
-      <h3>Horário de atendimento</h3>
-      <ul class="hours">
-        <li>Segunda a sexta<b>9h às 23h</b></li>
-        <li>Sábado<b>9h às 17h</b></li>
-        <li>Domingo e feriados<b>9h às 17h</b></li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section class="final">
-  <div class="wrap">
-    <h2 class="rv">Pronto para ter um site que traz clientes?</h2>
-    <div class="rv">
-      <p>Conte sobre o seu negócio pelo WhatsApp e receba um orçamento sem compromisso.</p>
-      <a class="btn" href="https://wa.me/5551995424238?text=Ol%C3%A1!%20Gostaria%20de%20conhecer%20um%20pouco%20melhor%20os%20servi%C3%A7os%20da%20Elevare%20Studio." target="_blank" rel="noopener">Pedir meu orçamento</a>
-    </div>
-  </div>
-</section>
-</main>
-
-<footer>
-  <div class="wrap">
-    <div class="foot">
-      <div>
-        <a href="#inicio" class="logo" aria-label="Elevare Studio, página inicial"><img src="logo.png" alt="Elevare Studio" width="170" height="42"></a>
-        <p>Sites e landing pages com estrutura e design para converter visitantes em clientes.</p>
-      </div>
-      <div>
-        <h4>Navegue</h4>
+  <header class="nav">
+    <div class="wrap">
+      <a href="#inicio" class="logo" aria-label="Elevare Studio, página inicial"><img src="logo.png"
+          alt="Elevare Studio" width="170" height="42"></a>
+      <nav id="menu" aria-label="Principal">
         <ul>
           <li><a href="#portfolio">Portfólio</a></li>
           <li><a href="#servicos">Serviços</a></li>
           <li><a href="#diferenciais">Diferenciais</a></li>
           <li><a href="#depoimentos">Depoimentos</a></li>
-          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#preco">Preço</a></li>
+          <li><a href="#contato">Contato</a></li>
         </ul>
-      </div>
-      <div>
-        <h4>Contato</h4>
-        <ul>
-          <li><a href="https://wa.me/5551995424238?text=Ol%C3%A1!%20Gostaria%20de%20conhecer%20um%20pouco%20melhor%20os%20servi%C3%A7os%20da%20Elevare%20Studio." target="_blank" rel="noopener">WhatsApp (51) 99542-4238</a></li>
-          <li>Seg a sex, 9h às 23h</li>
-        </ul>
-      </div>
+        <a class="btn btn-main menu-cta"
+          href="https://wa.me/5551995424238?text=Ol%C3%A1!%20Gostaria%20de%20conhecer%20um%20pouco%20melhor%20os%20servi%C3%A7os%20da%20Elevare%20Studio."
+          target="_blank" rel="noopener">Pedir orçamento</a>
+      </nav>
+      <a class="btn btn-main"
+        href="https://wa.me/5551995424238?text=Ol%C3%A1!%20Gostaria%20de%20conhecer%20um%20pouco%20melhor%20os%20servi%C3%A7os%20da%20Elevare%20Studio."
+        target="_blank" rel="noopener">Pedir orçamento</a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu"
+        aria-label="Abrir menu"><span></span><span></span><span></span></button>
     </div>
-    <p class="copy">© <span id="ano">2026</span> Elevare Studio. Todos os direitos reservados.</p>
-  </div>
-</footer>
+  </header>
 
-<a class="wa-float" href="https://wa.me/5551995424238?text=Ol%C3%A1!%20Gostaria%20de%20conhecer%20um%20pouco%20melhor%20os%20servi%C3%A7os%20da%20Elevare%20Studio." target="_blank" rel="noopener" aria-label="Conversar no WhatsApp">
-  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2a9.9 9.9 0 0 0-8.44 15.1L2 22l5.03-1.58A9.9 9.9 0 1 0 12.04 2zm0 1.8a8.1 8.1 0 1 1-4.3 14.98l-.3-.19-2.98.94.97-2.9-.2-.31A8.1 8.1 0 0 1 12.04 3.8zM8.6 7.4c-.2 0-.5.07-.75.35-.26.28-1 1-1 2.4s1.03 2.8 1.18 3c.14.2 2 3.2 4.95 4.35 2.45.96 2.95.77 3.48.72.53-.05 1.7-.7 1.94-1.37.24-.67.24-1.25.17-1.37-.07-.12-.26-.2-.55-.34-.29-.14-1.7-.84-1.96-.94-.27-.1-.46-.14-.65.14-.2.29-.75.94-.92 1.13-.17.2-.34.22-.63.07-.29-.14-1.22-.45-2.32-1.43-.86-.77-1.44-1.7-1.6-1.99-.17-.29-.02-.45.13-.6.13-.13.29-.34.43-.5.14-.17.2-.29.29-.48.1-.2.05-.36-.02-.5-.07-.15-.65-1.6-.9-2.18-.23-.56-.47-.48-.65-.49h-.55z"/></svg>
-</a>
+  <main>
+    <section class="hero" id="inicio">
+      <div class="wrap">
+        <div class="hero-text">
+          <h1>Sites e landing pages que transformam visitantes em clientes.</h1>
+          <p>Estrutura clara, design profissional e um caminho direto até o seu WhatsApp. Para negócios que ainda não
+            têm site ou querem refazer o que já têm.</p>
+          <div class="actions">
+            <a class="btn btn-main"
+              href="https://wa.me/5551995424238?text=Ol%C3%A1!%20Gostaria%20de%20conhecer%20um%20pouco%20melhor%20os%20servi%C3%A7os%20da%20Elevare%20Studio."
+              target="_blank" rel="noopener">Solicitar orçamento</a>
+            <a class="btn btn-ghost" href="#portfolio">Ver portfólio</a>
+          </div>
+          <p class="fact">Especialidades: landing pages de alta conversão, sites institucionais e redesign de sites.
+            Atendimento direto pelo WhatsApp.</p>
+        </div>
+        <div class="stage" aria-hidden="true">
+          <img class="m-desk" src="artisan-desktop.png" alt="">
+          <img class="m-phone" src="artisan-mobile.png" alt="">
+        </div>
+      </div>
+    </section>
 
-<script>
-document.body.classList.remove('no-js');
-document.getElementById('ano').textContent = new Date().getFullYear();
-document.querySelectorAll('.work-grid > .work, .bento > .tile, .diff-grid > .dif, .quotes > .quote, .for').forEach((el) => el.classList.add('rv'));
-const io = new IntersectionObserver((entries) => {
-  entries.forEach((e) => {
-    if (e.isIntersecting) {
-      e.target.classList.add('in');
-      setTimeout(() => e.target.classList.add('revealed'), 900);
-      io.unobserve(e.target);
+    <section class="portfolio" id="portfolio">
+      <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+        <symbol id="s1" viewBox="0 0 640 400">
+          <rect width="640" height="400" fill="#082a44" />
+          <rect x="48" y="72" width="300" height="26" rx="13" fill="#a7e7ed" />
+          <rect x="48" y="112" width="220" height="26" rx="13" fill="#a7e7ed" opacity=".5" />
+          <rect x="48" y="176" width="150" height="46" rx="23" fill="#16b1db" />
+          <rect x="392" y="56" width="200" height="288" rx="18" fill="#16b1db" />
+          <rect x="412" y="84" width="120" height="14" rx="7" fill="#082a44" />
+          <rect x="412" y="110" width="84" height="14" rx="7" fill="#082a44" opacity=".5" />
+        </symbol>
+        <symbol id="s2" viewBox="0 0 640 400">
+          <rect width="640" height="400" fill="#eef9fb" />
+          <rect x="32" y="28" width="32" height="32" rx="8" fill="#082a44" />
+          <rect x="400" y="38" width="60" height="12" rx="6" fill="#bcd0da" />
+          <rect x="480" y="38" width="60" height="12" rx="6" fill="#bcd0da" />
+          <rect x="32" y="90" width="576" height="130" rx="16" fill="#16b1db" />
+          <rect x="60" y="122" width="240" height="20" rx="10" fill="#082a44" />
+          <rect x="60" y="154" width="170" height="20" rx="10" fill="#082a44" opacity=".5" />
+          <rect x="32" y="244" width="180" height="120" rx="14" fill="#fff" />
+          <rect x="230" y="244" width="180" height="120" rx="14" fill="#fff" />
+          <rect x="428" y="244" width="180" height="120" rx="14" fill="#a7e7ed" />
+        </symbol>
+        <symbol id="s3" viewBox="0 0 640 400">
+          <rect width="320" height="400" fill="#d6dde2" />
+          <rect x="24" y="30" width="200" height="14" fill="#aab6bf" />
+          <rect x="24" y="64" width="150" height="60" fill="#b9c4cc" />
+          <rect x="190" y="90" width="110" height="90" fill="#c4ced5" />
+          <rect x="24" y="190" width="270" height="10" fill="#aab6bf" />
+          <rect x="24" y="214" width="240" height="10" fill="#aab6bf" />
+          <rect x="320" width="320" height="400" fill="#082a44" />
+          <rect x="352" y="56" width="200" height="22" rx="11" fill="#a7e7ed" />
+          <rect x="352" y="92" width="150" height="22" rx="11" fill="#a7e7ed" opacity=".5" />
+          <rect x="352" y="150" width="110" height="38" rx="19" fill="#16b1db" />
+          <rect x="352" y="230" width="116" height="110" rx="12" fill="#0d3a5c" />
+          <rect x="484" y="230" width="116" height="110" rx="12" fill="#16b1db" />
+        </symbol>
+      </svg>
+      <div class="wrap">
+        <div class="head rv">
+          <h2>Projetos feitos pela Elevare Studio</h2>
+          <p>Conheça o PontoAlvo e veja formatos de sites e landing pages que podemos criar para o seu negócio.</p>
+        </div>
+        <div class="portfolio-carousel">
+          <div class="work-grid" role="region" aria-label="Carrossel de projetos" tabindex="0">
+            <a class="work" href="https://odontoharmonia.netlify.app" target="_blank" rel="noopener">
+              <div class="work-thumb"><img src="clinica.PNG" alt="Prévia do site da Clínica OdontoHarmonia"></div>
+              <div class="work-info">
+                <div>
+                  <h3>Clínica OdontoHarmonia</h3><span>Estrutura de página focada em conversão</span>
+                </div><b>Ver demonstração</b>
+              </div>
+            </a>
+            <a class="work" href="https://artisan-burger.netlify.app" target="_blank" rel="noopener">
+              <div class="work-thumb"><img src="artisan-burger.png" alt="Prévia do site Artisan Burger &amp; Craft">
+              </div>
+              <div class="work-info">
+                <div>
+                  <h3>Artisan Burger & Craft</h3><span>Estrutura de página focada em conversão</span>
+                </div><b>Ver demonstração</b>
+              </div>
+            </a>
+            <a class="work work-pontoalvo" href="https://dashboardvendaexterna-1.onrender.com/#/" target="_blank"
+              rel="noopener">
+              <div class="work-thumb"><img src="pontoalvo.PNG" alt="Prévia do site PontoAlvo"></div>
+              <div class="work-info">
+                <div>
+                  <h3>PontoAlvo</h3><span>Aplicativo para empresas</span>
+                </div><b>Ver demonstração</b>
+              </div>
+            </a>
+
+          </div>
+          <div class="portfolio-carousel-controls" hidden>
+            <button type="button" class="portfolio-carousel-prev" aria-label="Ver projetos anteriores" disabled>
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="m15 18-6-6 6-6" fill="none" stroke="currentColor" stroke-linecap="round"
+                  stroke-linejoin="round" stroke-width="2" />
+              </svg>
+            </button>
+            <button type="button" class="portfolio-carousel-next" aria-label="Ver próximos projetos">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="m9 18 6-6-6-6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                  stroke-width="2" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <p class="portfolio-carousel-status" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <section class="services" id="servicos">
+      <div class="wrap">
+        <div class="head rv">
+          <h2>O que a Elevare Studio faz pelo seu negócio</h2>
+          <p>Do primeiro rascunho ao site no ar, cuidamos de tudo para você focar em atender.</p>
+        </div>
+        <div class="bento">
+          <article class="tile big">
+            <div>
+              <h3>Landing pages de alta conversão</h3>
+              <p>Uma página única, direta e focada em um objetivo: levar o visitante a chamar no WhatsApp ou agendar.
+              </p>
+            </div>
+            <img class="tile-preview" src="odontoharmonia-landing.png"
+              alt="Prévia da landing page da Clínica OdontoHarmonia">
+          </article>
+          <article class="tile sm">
+            <h3>Sites institucionais</h3>
+            <p>Seu negócio com endereço próprio, serviços, horários, localização e tudo o que o cliente procura.</p>
+          </article>
+          <article class="tile sm">
+            <h3>Redesign de sites</h3>
+            <p>Seu site é antigo, lento ou confuso? Reorganizamos a estrutura e renovamos o visual para converter mais.
+            </p>
+          </article>
+        </div>
+        <div class="for">
+          <span>Atendemos:</span>
+          <b>Barbearias</b><b>Dentistas</b><b>Mercados</b><b>Lancherias</b><b>Clínicas</b><b>Lojas</b><b>Prestadores de
+            serviço</b>
+        </div>
+      </div>
+    </section>
+
+    <section class="diff" id="diferenciais">
+      <div class="wrap">
+        <div class="head rv">
+          <h2>Bonito é o mínimo. O site tem que vender.</h2>
+          <p>A maioria dos sites perde clientes por estrutura confusa e design sem direção. Resolvemos isso desde o
+            começo.</p>
+        </div>
+        <div class="diff-grid">
+          <div class="dif hero-d">
+            <h3>Estrutura pensada para converter</h3>
+            <p>Cada bloco da página tem uma função: mostrar valor, gerar confiança e levar ao contato.</p>
+          </div>
+          <div class="dif w2">
+            <h3>Feito para o celular</h3>
+            <p>Seu cliente chega pelo celular. O site abre rápido, lê fácil e o botão de contato está sempre à mão.</p>
+          </div>
+          <div class="dif cy">
+            <h3>Carregamento rápido</h3>
+            <p>Páginas leves, sem enfeites que travam.</p>
+          </div>
+          <div class="dif">
+            <h3>Presença no Google</h3>
+            <p>Estrutura pronta para as buscas da sua região.</p>
+          </div>
+          <div class="dif w2">
+            <h3>Atendimento direto</h3>
+            <p>Você fala com quem faz o seu site, sem intermediários, e acompanha cada etapa.</p>
+          </div>
+          <div class="dif w2">
+            <h3>Preço claro, sem surpresas</h3>
+            <p>Você recebe o orçamento fechado antes de começar. O que combinamos é o que você paga.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="proof" id="depoimentos">
+      <div class="wrap">
+        <div class="head rv">
+          <h2>Quem já elevou a presença online</h2>
+        </div>
+        <div class="quotes">
+          <figure class="quote lead">
+            <blockquote>Antes eu só tinha Instagram. Com a página nova, os clientes passaram a encontrar a barbearia no
+              Google e agendar direto pelo WhatsApp.</blockquote>
+            <cite><b>R</b>
+              <div>Rafael M.<span>Dono de barbearia</span></div>
+            </cite>
+          </figure>
+          <figure class="quote">
+            <blockquote>Meu site antigo era confuso e ninguém ligava. O redesign deixou tudo claro: serviços, horários e
+              um botão para marcar consulta. O movimento aumentou.</blockquote>
+            <cite><b>D</b>
+              <div>Dra. Camila S.<span>Dentista</span></div>
+            </cite>
+          </figure>
+          <figure class="quote">
+            <blockquote>Rápido, bonito e sem enrolação. Mostramos o cardápio e as promoções, e os pedidos pelo WhatsApp
+              cresceram desde a primeira semana.</blockquote>
+            <cite><b>L</b>
+              <div>Luciano P.<span>Dono de lancheria</span></div>
+            </cite>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="price" id="preco">
+      <div class="wrap rv">
+        <h2>Landing pages para o seu negócio</h2>
+        <p class="price-label">A partir de</p>
+        <p class="price-value">R$ 399,99</p>
+        <p>Você recebe o orçamento fechado antes de começar. O valor final depende das necessidades do seu projeto.</p>
+        <p>Projetos entregues em média entre 5 e 7 dias úteis.</p>
+        <a class="btn btn-cyan"
+          href="https://wa.me/5551995424238?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20landing%20pages%20a%20partir%20de%20R%24%20399%2C99."
+          target="_blank" rel="noopener">Pedir orçamento pelo WhatsApp</a>
+      </div>
+    </section>
+
+    <section class="where" id="contato">
+      <div class="wrap">
+        <div class="box rv">
+          <h3>Onde estamos</h3>
+          <p>Atendemos 100% online, para negócios de todo o Brasil.</p>
+          <p>Conversa direta no WhatsApp, no horário que for melhor para você.</p>
+          <p><strong>WhatsApp:</strong> (51) 99542-4238</p>
+          <a class="btn btn-cyan"
+            href="https://wa.me/5551995424238?text=Ol%C3%A1!%20Gostaria%20de%20conhecer%20um%20pouco%20melhor%20os%20servi%C3%A7os%20da%20Elevare%20Studio."
+            target="_blank" rel="noopener">Chamar agora</a>
+        </div>
+        <div class="box dark rv">
+          <h3>Horário de atendimento</h3>
+          <ul class="hours">
+            <li>Segunda a sexta<b>9h às 23h</b></li>
+            <li>Sábado<b>9h às 17h</b></li>
+            <li>Domingo e feriados<b>9h às 17h</b></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="final">
+      <div class="wrap">
+        <h2 class="rv">Pronto para ter um site que traz clientes?</h2>
+        <div class="rv">
+          <p>Conte sobre o seu negócio pelo WhatsApp e receba um orçamento sem compromisso.</p>
+          <a class="btn"
+            href="https://wa.me/5551995424238?text=Ol%C3%A1!%20Gostaria%20de%20conhecer%20um%20pouco%20melhor%20os%20servi%C3%A7os%20da%20Elevare%20Studio."
+            target="_blank" rel="noopener">Pedir meu orçamento</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="foot">
+        <div>
+          <a href="#inicio" class="logo" aria-label="Elevare Studio, página inicial"><img src="logo.png"
+              alt="Elevare Studio" width="170" height="42"></a>
+          <p>Sites e landing pages com estrutura e design para converter visitantes em clientes.</p>
+        </div>
+        <div>
+          <h4>Navegue</h4>
+          <ul>
+            <li><a href="#portfolio">Portfólio</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#diferenciais">Diferenciais</a></li>
+            <li><a href="#depoimentos">Depoimentos</a></li>
+            <li><a href="#preco">Preço</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contato</h4>
+          <ul>
+            <li><a
+                href="https://wa.me/5551995424238?text=Ol%C3%A1!%20Gostaria%20de%20conhecer%20um%20pouco%20melhor%20os%20servi%C3%A7os%20da%20Elevare%20Studio."
+                target="_blank" rel="noopener">WhatsApp (51) 99542-4238</a></li>
+            <li><a class="insta-link" href="https://www.instagram.com/elevarestudi0/" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2zm0 2A3.8 3.8 0 0 0 4 7.8v8.4A3.8 3.8 0 0 0 7.8 20h8.4a3.8 3.8 0 0 0 3.8-3.8V7.8A3.8 3.8 0 0 0 16.2 4H7.8zm4.2 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm5.2-3.5a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4z" />
+                </svg>
+                Instagram
+              </a></li>
+            <li>Seg a sex, 9h às 23h</li>
+          </ul>
+        </div>
+      </div>
+      <p class="copy">© <span id="ano">2026</span> Elevare Studio. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <a class="wa-float"
+    href="https://wa.me/5551995424238?text=Ol%C3%A1!%20Gostaria%20de%20conhecer%20um%20pouco%20melhor%20os%20servi%C3%A7os%20da%20Elevare%20Studio."
+    target="_blank" rel="noopener" aria-label="Conversar no WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path
+        d="M12.04 2a9.9 9.9 0 0 0-8.44 15.1L2 22l5.03-1.58A9.9 9.9 0 1 0 12.04 2zm0 1.8a8.1 8.1 0 1 1-4.3 14.98l-.3-.19-2.98.94.97-2.9-.2-.31A8.1 8.1 0 0 1 12.04 3.8zM8.6 7.4c-.2 0-.5.07-.75.35-.26.28-1 1-1 2.4s1.03 2.8 1.18 3c.14.2 2 3.2 4.95 4.35 2.45.96 2.95.77 3.48.72.53-.05 1.7-.7 1.94-1.37.24-.67.24-1.25.17-1.37-.07-.12-.26-.2-.55-.34-.29-.14-1.7-.84-1.96-.94-.27-.1-.46-.14-.65.14-.2.29-.75.94-.92 1.13-.17.2-.34.22-.63.07-.29-.14-1.22-.45-2.32-1.43-.86-.77-1.44-1.7-1.6-1.99-.17-.29-.02-.45.13-.6.13-.13.29-.34.43-.5.14-.17.2-.29.29-.48.1-.2.05-.36-.02-.5-.07-.15-.65-1.6-.9-2.18-.23-.56-.47-.48-.65-.49h-.55z" />
+    </svg>
+  </a>
+
+  <script>
+    document.body.classList.remove('no-js');
+    document.getElementById('ano').textContent = new Date().getFullYear();
+    document.querySelectorAll('.work-grid > .work, .bento > .tile, .diff-grid > .dif, .quotes > .quote, .for').forEach((el) => el.classList.add('rv'));
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.classList.add('in');
+          setTimeout(() => e.target.classList.add('revealed'), 900);
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -5% 0px' });
+    document.querySelectorAll('.rv').forEach((el) => io.observe(el));
+
+    const workGrid = document.querySelector('.work-grid');
+    const workCards = Array.from(workGrid.querySelectorAll('.work'));
+    const carouselControls = document.querySelector('.portfolio-carousel-controls');
+    const carouselStatus = document.querySelector('.portfolio-carousel-status');
+    const previousProject = document.querySelector('.portfolio-carousel-prev');
+    const nextProject = document.querySelector('.portfolio-carousel-next');
+    let carouselAnimationId = null;
+    let carouselTarget = null;
+
+    function cancelPortfolioAnimation() {
+      if (carouselAnimationId !== null) {
+        cancelAnimationFrame(carouselAnimationId);
+        carouselAnimationId = null;
+        carouselTarget = null;
+        workGrid.classList.remove('is-animating');
+      }
     }
-  });
-}, { threshold: 0.1, rootMargin: '0px 0px -5% 0px' });
-document.querySelectorAll('.rv').forEach((el) => io.observe(el));
 
-const workGrid = document.querySelector('.work-grid');
-const workCards = Array.from(workGrid.querySelectorAll('.work'));
-const carouselControls = document.querySelector('.portfolio-carousel-controls');
-const carouselStatus = document.querySelector('.portfolio-carousel-status');
-const previousProject = document.querySelector('.portfolio-carousel-prev');
-const nextProject = document.querySelector('.portfolio-carousel-next');
-let carouselAnimationId = null;
-let carouselTarget = null;
+    function updatePortfolioCarousel() {
+      const gap = parseFloat(getComputedStyle(workGrid).columnGap);
+      const step = workCards[0].getBoundingClientRect().width + gap;
+      const firstIndex = Math.min(workCards.length - 1, Math.max(0, Math.round(workGrid.scrollLeft / step)));
+      const visibleCards = Math.max(1, Math.round((workGrid.clientWidth + gap) / step));
+      const lastIndex = Math.min(workCards.length, firstIndex + visibleCards);
+      carouselStatus.textContent = firstIndex + 1 === lastIndex
+        ? `Projeto ${firstIndex + 1} de ${workCards.length}`
+        : `Projetos ${firstIndex + 1} a ${lastIndex} de ${workCards.length}`;
+      previousProject.disabled = workGrid.scrollLeft <= 1;
+      nextProject.disabled = workGrid.scrollLeft >= workGrid.scrollWidth - workGrid.clientWidth - 1;
+    }
 
-function cancelPortfolioAnimation() {
-  if (carouselAnimationId !== null) {
-    cancelAnimationFrame(carouselAnimationId);
-    carouselAnimationId = null;
-    carouselTarget = null;
-    workGrid.classList.remove('is-animating');
-  }
-}
+    function movePortfolioCarousel(direction) {
+      const gap = parseFloat(getComputedStyle(workGrid).columnGap);
+      const distance = workCards[0].getBoundingClientRect().width + gap;
+      const destination = Math.max(0, Math.min(
+        workGrid.scrollWidth - workGrid.clientWidth,
+        (carouselTarget ?? workGrid.scrollLeft) + direction * distance
+      ));
+      cancelPortfolioAnimation();
 
-function updatePortfolioCarousel() {
-  const gap = parseFloat(getComputedStyle(workGrid).columnGap);
-  const step = workCards[0].getBoundingClientRect().width + gap;
-  const firstIndex = Math.min(workCards.length - 1, Math.max(0, Math.round(workGrid.scrollLeft / step)));
-  const visibleCards = Math.max(1, Math.round((workGrid.clientWidth + gap) / step));
-  const lastIndex = Math.min(workCards.length, firstIndex + visibleCards);
-  carouselStatus.textContent = firstIndex + 1 === lastIndex
-    ? `Projeto ${firstIndex + 1} de ${workCards.length}`
-    : `Projetos ${firstIndex + 1} a ${lastIndex} de ${workCards.length}`;
-  previousProject.disabled = workGrid.scrollLeft <= 1;
-  nextProject.disabled = workGrid.scrollLeft >= workGrid.scrollWidth - workGrid.clientWidth - 1;
-}
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        workGrid.scrollLeft = destination;
+        return;
+      }
 
-function movePortfolioCarousel(direction) {
-  const gap = parseFloat(getComputedStyle(workGrid).columnGap);
-  const distance = workCards[0].getBoundingClientRect().width + gap;
-  const destination = Math.max(0, Math.min(
-    workGrid.scrollWidth - workGrid.clientWidth,
-    (carouselTarget ?? workGrid.scrollLeft) + direction * distance
-  ));
-  cancelPortfolioAnimation();
+      const start = workGrid.scrollLeft;
+      const distanceToTarget = destination - start;
+      if (!distanceToTarget) return;
 
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    workGrid.scrollLeft = destination;
-    return;
-  }
+      carouselTarget = destination;
+      workGrid.classList.add('is-animating');
+      let startTime;
+      function animate(timestamp) {
+        startTime ??= timestamp;
+        const progress = Math.min((timestamp - startTime) / 760, 1);
+        const eased = progress < 0.5
+          ? 4 * progress ** 3
+          : 1 - Math.pow(-2 * progress + 2, 3) / 2;
+        workGrid.scrollLeft = start + distanceToTarget * eased;
 
-  const start = workGrid.scrollLeft;
-  const distanceToTarget = destination - start;
-  if (!distanceToTarget) return;
-
-  carouselTarget = destination;
-  workGrid.classList.add('is-animating');
-  let startTime;
-  function animate(timestamp) {
-    startTime ??= timestamp;
-    const progress = Math.min((timestamp - startTime) / 760, 1);
-    const eased = progress < 0.5
-      ? 4 * progress ** 3
-      : 1 - Math.pow(-2 * progress + 2, 3) / 2;
-    workGrid.scrollLeft = start + distanceToTarget * eased;
-
-    if (progress < 1) {
+        if (progress < 1) {
+          carouselAnimationId = requestAnimationFrame(animate);
+        } else {
+          workGrid.scrollLeft = destination;
+          carouselAnimationId = null;
+          carouselTarget = null;
+          workGrid.classList.remove('is-animating');
+        }
+      }
       carouselAnimationId = requestAnimationFrame(animate);
-    } else {
-      workGrid.scrollLeft = destination;
-      carouselAnimationId = null;
-      carouselTarget = null;
-      workGrid.classList.remove('is-animating');
     }
-  }
-  carouselAnimationId = requestAnimationFrame(animate);
-}
 
-previousProject.addEventListener('click', () => movePortfolioCarousel(-1));
-nextProject.addEventListener('click', () => movePortfolioCarousel(1));
-workGrid.addEventListener('scroll', updatePortfolioCarousel, { passive: true });
-workGrid.addEventListener('pointerdown', cancelPortfolioAnimation);
-workGrid.addEventListener('touchstart', cancelPortfolioAnimation, { passive: true });
-workGrid.addEventListener('wheel', cancelPortfolioAnimation, { passive: true });
-workGrid.addEventListener('keydown', cancelPortfolioAnimation);
-window.addEventListener('resize', updatePortfolioCarousel);
-carouselControls.hidden = false;
-updatePortfolioCarousel();
+    previousProject.addEventListener('click', () => movePortfolioCarousel(-1));
+    nextProject.addEventListener('click', () => movePortfolioCarousel(1));
+    workGrid.addEventListener('scroll', updatePortfolioCarousel, { passive: true });
+    workGrid.addEventListener('pointerdown', cancelPortfolioAnimation);
+    workGrid.addEventListener('touchstart', cancelPortfolioAnimation, { passive: true });
+    workGrid.addEventListener('wheel', cancelPortfolioAnimation, { passive: true });
+    workGrid.addEventListener('keydown', cancelPortfolioAnimation);
+    window.addEventListener('resize', updatePortfolioCarousel);
+    carouselControls.hidden = false;
+    updatePortfolioCarousel();
 
-const buttonClickTimers = new WeakMap();
-document.addEventListener('click', (e) => {
-  const button = e.target.closest('.btn, .wa-float');
-  if (!button) return;
-  window.clearTimeout(buttonClickTimers.get(button));
-  button.classList.remove('is-clicked');
-  void button.offsetWidth;
-  button.classList.add('is-clicked');
-  buttonClickTimers.set(button, window.setTimeout(() => button.classList.remove('is-clicked'), 500));
-  const opensNewTab = button.tagName === 'A' && button.target === '_blank' && e.button === 0 && !(e.metaKey || e.ctrlKey || e.shiftKey || e.altKey);
-  if (opensNewTab) {
-    e.preventDefault();
-    setTimeout(() => {
-      const tab = window.open(button.href, '_blank');
-      if (tab) tab.opener = null;
-      else window.location.href = button.href;
-    }, 220);
-  }
-});
+    const buttonClickTimers = new WeakMap();
+    document.addEventListener('click', (e) => {
+      const button = e.target.closest('.btn, .wa-float');
+      if (!button) return;
+      window.clearTimeout(buttonClickTimers.get(button));
+      button.classList.remove('is-clicked');
+      void button.offsetWidth;
+      button.classList.add('is-clicked');
+      buttonClickTimers.set(button, window.setTimeout(() => button.classList.remove('is-clicked'), 500));
+      const opensNewTab = button.tagName === 'A' && button.target === '_blank' && e.button === 0 && !(e.metaKey || e.ctrlKey || e.shiftKey || e.altKey);
+      if (opensNewTab) {
+        e.preventDefault();
+        setTimeout(() => {
+          const tab = window.open(button.href, '_blank');
+          if (tab) tab.opener = null;
+          else window.location.href = button.href;
+        }, 220);
+      }
+    });
 
-const menu = document.getElementById('menu');
-const menuBtn = document.querySelector('.menu-btn');
-function setMenu(open) {
-  menu.classList.toggle('open', open);
-  menuBtn.setAttribute('aria-expanded', String(open));
-  menuBtn.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
-}
-menuBtn.addEventListener('click', () => setMenu(!menu.classList.contains('open')));
-menu.querySelectorAll('a').forEach((a) => a.addEventListener('click', () => setMenu(false)));
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape' && menu.classList.contains('open')) { setMenu(false); menuBtn.focus(); }
-});
-document.addEventListener('click', (e) => { if (!e.target.closest('.nav')) setMenu(false); });
-window.matchMedia('(min-width: 901px)').addEventListener('change', (e) => { if (e.matches) setMenu(false); });
+    const menu = document.getElementById('menu');
+    const menuBtn = document.querySelector('.menu-btn');
+    function setMenu(open) {
+      menu.classList.toggle('open', open);
+      menuBtn.setAttribute('aria-expanded', String(open));
+      menuBtn.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
+    }
+    menuBtn.addEventListener('click', () => setMenu(!menu.classList.contains('open')));
+    menu.querySelectorAll('a').forEach((a) => a.addEventListener('click', () => setMenu(false)));
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && menu.classList.contains('open')) { setMenu(false); menuBtn.focus(); }
+    });
+    document.addEventListener('click', (e) => { if (!e.target.closest('.nav')) setMenu(false); });
+    window.matchMedia('(min-width: 901px)').addEventListener('change', (e) => { if (e.matches) setMenu(false); });
 
-const wa = document.querySelector('.wa-float');
-const covered = new Set();
-const waIo = new IntersectionObserver((entries) => {
-  entries.forEach((e) => (e.isIntersecting ? covered.add(e.target) : covered.delete(e.target)));
-  wa.classList.toggle('hide', covered.size > 0);
-});
-document.querySelectorAll('.final, footer').forEach((el) => waIo.observe(el));
-</script>
+    const wa = document.querySelector('.wa-float');
+    const covered = new Set();
+    const waIo = new IntersectionObserver((entries) => {
+      entries.forEach((e) => (e.isIntersecting ? covered.add(e.target) : covered.delete(e.target)));
+      wa.classList.toggle('hide', covered.size > 0);
+    });
+    document.querySelectorAll('.final, footer').forEach((el) => waIo.observe(el));
+  </script>
 </body>
+
 </html>
