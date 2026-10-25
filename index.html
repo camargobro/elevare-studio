@@ -303,6 +303,42 @@
       align-self: center
     }
 
+    .promo-banner {
+      display: block;
+      overflow: hidden;
+      margin-bottom: 28px;
+      padding: 13px 0;
+      border: 1px solid rgba(167, 231, 237, .45);
+      border-radius: 999px;
+      background: rgba(167, 231, 237, .12);
+      color: var(--main);
+      text-decoration: none
+    }
+
+    .promo-track {
+      display: flex;
+      width: max-content;
+      animation: promo-scroll 18s linear infinite
+    }
+
+    .promo-track span {
+      flex: none;
+      padding-right: 48px;
+      font-size: .9rem;
+      font-weight: 600;
+      white-space: nowrap
+    }
+
+    .promo-banner:hover .promo-track {
+      animation-play-state: paused
+    }
+
+    @keyframes promo-scroll {
+      to {
+        transform: translateX(-50%)
+      }
+    }
+
     .hero h1 {
       font-size: clamp(2.125rem, 8.6vw, 3.75rem);
       margin-bottom: 26px
@@ -845,17 +881,55 @@
       max-width: 56ch
     }
 
-    .price-label {
-      font-weight: 600;
-      font-size: 1.05rem
+    .price-packages {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      align-items: stretch;
+      gap: 20px;
+      width: 100%;
+      margin-top: 20px;
+      text-align: left
     }
 
-    .price-value {
+    .price-card {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 18px;
+      padding: 30px;
+      border: 1px solid rgba(8, 42, 68, .16);
+      border-radius: 22px;
+      background: #fff;
+      box-shadow: 0 12px 32px rgba(8, 42, 68, .08)
+    }
+
+    .price-card:first-child {
+      border: 2px solid var(--navy)
+    }
+
+    .price-card h3 {
+      font-size: 1.3rem
+    }
+
+    .price-card .price-value {
       font-family: var(--head);
-      font-size: clamp(2.5rem, 10vw, 5rem);
+      font-size: clamp(2.4rem, 4vw, 3.5rem);
       font-weight: 800;
       line-height: 1;
       letter-spacing: -.04em
+    }
+
+    .price-card ul {
+      display: grid;
+      gap: 10px;
+      padding-left: 20px;
+      font-size: .95rem;
+      opacity: .82
+    }
+
+    .price-card .btn {
+      width: 100%;
+      margin-top: auto
     }
 
     .where {
@@ -1043,12 +1117,12 @@
       width: 62px;
       height: 62px;
       border-radius: 50%;
-      background: var(--main);
-      color: var(--navy);
+      color: #fff;
       display: grid;
       place-items: center;
-      box-shadow: 0 10px 28px rgba(8, 42, 68, .4);
-      border: 3px solid var(--navy);
+      background: #25d366;
+      box-shadow: 0 10px 28px rgba(0, 0, 0, .24);
+      border: 3px solid #fff;
       transition: transform .15s, opacity .2s, visibility .2s
     }
 
@@ -1058,7 +1132,8 @@
     }
 
     .wa-float:hover {
-      transform: scale(1.08)
+      transform: scale(1.08);
+      background: #1fb959
     }
 
     .wa-float svg {
@@ -1136,6 +1211,10 @@
         margin-right: -20px
       }
 
+      .promo-banner {
+        margin-bottom: 24px
+      }
+
       section {
         padding: 80px 0
       }
@@ -1150,6 +1229,10 @@
 
       .work {
         flex-basis: 100%
+      }
+
+      .price-packages {
+        grid-template-columns: minmax(0, 1fr)
       }
 
       .tile.big,
@@ -1219,7 +1302,8 @@
       .wa-float {
         width: 56px;
         height: 56px;
-        left: 16px;
+        left: auto;
+        right: 16px;
         bottom: calc(16px + env(safe-area-inset-bottom))
       }
 
@@ -1232,6 +1316,10 @@
     @media (prefers-reduced-motion:reduce) {
       html {
         scroll-behavior: auto
+      }
+
+      .promo-track {
+        animation: none
       }
 
       * {
@@ -1279,11 +1367,11 @@
         </ul>
         <a class="btn btn-main menu-cta"
           href="https://wa.me/5551995424238?text=Ol%C3%A1!%20Gostaria%20de%20conhecer%20um%20pouco%20melhor%20os%20servi%C3%A7os%20da%20Elevare%20Studio."
-          target="_blank" rel="noopener">Pedir orçamento</a>
+          target="_blank" rel="noopener">Quero meu site</a>
       </nav>
       <a class="btn btn-main"
         href="https://wa.me/5551995424238?text=Ol%C3%A1!%20Gostaria%20de%20conhecer%20um%20pouco%20melhor%20os%20servi%C3%A7os%20da%20Elevare%20Studio."
-        target="_blank" rel="noopener">Pedir orçamento</a>
+        target="_blank" rel="noopener">Quero meu site</a>
       <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu"
         aria-label="Abrir menu"><span></span><span></span><span></span></button>
     </div>
@@ -1293,13 +1381,19 @@
     <section class="hero" id="inicio">
       <div class="wrap">
         <div class="hero-text">
+          <a class="promo-banner" href="#preco"
+            aria-label="Oferta de Lançamento: Landing Page Profissional a partir de R$ 399. Entregue em até 5 dias">
+            <span class="promo-track" aria-hidden="true">
+              <span>Oferta de Lançamento: Landing Page Profissional a partir de R$ 399 | Entregue em até 5 dias</span>
+              <span>Oferta de Lançamento: Landing Page Profissional a partir de R$ 399 | Entregue em até 5 dias</span>
+            </span>
+          </a>
           <h1>Sites e landing pages que transformam visitantes em clientes.</h1>
           <p>Estrutura clara, design profissional e um caminho direto até o seu WhatsApp. Para negócios que ainda não
             têm site ou querem refazer o que já têm.</p>
           <div class="actions">
             <a class="btn btn-main"
-              href="https://wa.me/5551995424238?text=Ol%C3%A1!%20Gostaria%20de%20conhecer%20um%20pouco%20melhor%20os%20servi%C3%A7os%20da%20Elevare%20Studio."
-              target="_blank" rel="noopener">Solicitar orçamento</a>
+              href="#preco">Solicitar orçamento</a>
             <a class="btn btn-ghost" href="#portfolio">Ver portfólio</a>
           </div>
           <p class="fact">Especialidades: landing pages de alta conversão, sites institucionais e redesign de sites.
@@ -1308,6 +1402,51 @@
         <div class="stage" aria-hidden="true">
           <img class="m-desk" src="artisan-desktop.png" alt="">
           <img class="m-phone" src="artisan-mobile.png" alt="">
+        </div>
+      </div>
+    </section>
+
+    <section class="price" id="preco">
+      <div class="wrap rv">
+        <h2>Escolha o pacote ideal para o seu negócio</h2>
+        <p>Valores claros para você tirar seu site do papel com a Elevare Studio.</p>
+        <div class="price-packages">
+          <article class="price-card">
+            <h3>Landing Page Essencial</h3>
+            <p class="price-value">R$ 399</p>
+            <ul>
+              <li>Página única</li>
+              <li>Botão de WhatsApp</li>
+              <li>Seções básicas</li>
+              <li>Entrega em até 5 dias</li>
+            </ul>
+            <a class="btn btn-cyan"
+              href="https://wa.me/5551995424238?text=Ol%C3%A1!%20Tenho%20interesse%20no%20pacote%20Landing%20Page%20Essencial%20(R%24%20399)."
+              target="_blank" rel="noopener">Quero este pacote</a>
+          </article>
+          <article class="price-card">
+            <h3>Landing Page Completa</h3>
+            <p class="price-value">R$ 699</p>
+            <ul>
+              <li>Mais seções para apresentar seu negócio</li>
+              <li>Prova social para gerar confiança</li>
+              <li>Simulação de serviços</li>
+            </ul>
+            <a class="btn btn-cyan"
+              href="https://wa.me/5551995424238?text=Ol%C3%A1!%20Tenho%20interesse%20no%20pacote%20Landing%20Page%20Completa%20(R%24%20699)."
+              target="_blank" rel="noopener">Quero este pacote</a>
+          </article>
+          <article class="price-card">
+            <h3>Site Institucional</h3>
+            <p class="price-value">R$ 990</p>
+            <ul>
+              <li>Múltiplas páginas</li>
+              <li>Para empresas consolidadas</li>
+            </ul>
+            <a class="btn btn-cyan"
+              href="https://wa.me/5551995424238?text=Ol%C3%A1!%20Tenho%20interesse%20no%20pacote%20Site%20Institucional%20(R%24%20990)."
+              target="_blank" rel="noopener">Quero este pacote</a>
+          </article>
         </div>
       </div>
     </section>
@@ -1361,8 +1500,8 @@
               <div class="work-thumb"><img src="clinica.PNG" alt="Prévia do site da Clínica OdontoHarmonia"></div>
               <div class="work-info">
                 <div>
-                  <h3>Clínica OdontoHarmonia</h3><span>Estrutura de página focada em conversão</span>
-                </div><b>Ver demonstração</b>
+                  <h3>Clínica OdontoHarmonia</h3><span>Odontologia / Saúde</span>
+                </div><b>Veja uma demonstração real para clínicas</b>
               </div>
             </a>
             <a class="work" href="https://artisan-burger.netlify.app" target="_blank" rel="noopener">
@@ -1370,8 +1509,8 @@
               </div>
               <div class="work-info">
                 <div>
-                  <h3>Artisan Burger & Craft</h3><span>Estrutura de página focada em conversão</span>
-                </div><b>Ver demonstração</b>
+                  <h3>Artisan Burger &amp; Craft</h3><span>Gastronomia / Delivery</span>
+                </div><b>Veja uma demonstração real para restaurantes/delivery</b>
               </div>
             </a>
             <a class="work work-pontoalvo" href="https://dashboardvendaexterna-1.onrender.com/#/" target="_blank"
@@ -1502,19 +1641,6 @@
             </cite>
           </figure>
         </div>
-      </div>
-    </section>
-
-    <section class="price" id="preco">
-      <div class="wrap rv">
-        <h2>Landing pages para o seu negócio</h2>
-        <p class="price-label">A partir de</p>
-        <p class="price-value">R$ 399,99</p>
-        <p>Você recebe o orçamento fechado antes de começar. O valor final depende das necessidades do seu projeto.</p>
-        <p>Projetos entregues em média entre 5 e 7 dias úteis.</p>
-        <a class="btn btn-cyan"
-          href="https://wa.me/5551995424238?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20landing%20pages%20a%20partir%20de%20R%24%20399%2C99."
-          target="_blank" rel="noopener">Pedir orçamento pelo WhatsApp</a>
       </div>
     </section>
 
@@ -1739,7 +1865,7 @@
       entries.forEach((e) => (e.isIntersecting ? covered.add(e.target) : covered.delete(e.target)));
       wa.classList.toggle('hide', covered.size > 0);
     });
-    document.querySelectorAll('.final, footer').forEach((el) => waIo.observe(el));
+    document.querySelectorAll('.portfolio, .price, .final, footer').forEach((el) => waIo.observe(el));
   </script>
 </body>
 
